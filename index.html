@@ -36,8 +36,8 @@ body{font-family:'Nunito','Poppins',system-ui,sans-serif;background:var(--cream)
 nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 5%;height:68px;display:flex;align-items:center;justify-content:space-between;transition:all 0.4s;background:var(--cream);}
 nav.scrolled{background:#F7F4EEf0;backdrop-filter:blur(24px);border-bottom:1px solid var(--border);box-shadow:0 1px 24px #1A181408;}
 .nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none;}
-.nav-logo-img{height:40px;width:auto;object-fit:contain;}
-.nav-logo-text{display:none;}
+.nav-logo-img{height:36px;width:auto;object-fit:contain;}
+.nav-logo-text{font-family:'Poppins','Nunito',system-ui,sans-serif;font-weight:700;font-size:18px;color:var(--ink);letter-spacing:-0.3px;}
 .nav-links{display:flex;gap:40px;}
 .nav-links a{color:var(--ink3);font-size:13.5px;text-decoration:none;font-weight:500;transition:color 0.2s;letter-spacing:0.1px;}
 .nav-links a:hover{color:var(--ink);}
@@ -325,7 +325,7 @@ footer{background:var(--ink);padding:56px 5% 36px;border-top:1px solid #ffffff0a
   </div>
   <div class="nav-right">
     <a href="https://app.blackhubble.com/login" class="btn-login">Login</a>
-    <a href="#waitlist" class="btn-cta">Get Early Access</a>
+    <a href="https://app.blackhubble.com/signup" class="btn-cta">Get Early Access</a>
   </div>
   <div class="hamburger" id="hamburger" onclick="toggleMenu()">
     <span></span><span></span><span></span>
@@ -340,7 +340,7 @@ footer{background:var(--ink);padding:56px 5% 36px;border-top:1px solid #ffffff0a
   <a href="#pricing" onclick="closeMenu()">Pricing</a>
   <a href="#careers" onclick="closeMenu()">Careers</a>
   <a href="https://app.blackhubble.com/login" onclick="closeMenu()">Login</a>
-  <a href="#waitlist" onclick="closeMenu()" style="color:var(--accent);font-weight:700;">Get Early Access →</a>
+  <a href="https://app.blackhubble.com/signup" onclick="closeMenu()" style="color:var(--accent);font-weight:700;">Get Early Access →</a>
 </div>
 
 
@@ -366,7 +366,7 @@ footer{background:var(--ink);padding:56px 5% 36px;border-top:1px solid #ffffff0a
         not generic market noise. Your money, your context, your decisions.
       </p>
       <div class="hero-actions">
-        <a href="#waitlist" class="btn-primary-lg">Request Early Access →</a>
+        <a href="https://app.blackhubble.com/signup" class="btn-primary-lg">Request Early Access →</a>
         <a href="#how" class="btn-secondary-lg">See how it works</a>
       </div>
       <div class="hero-trust">
@@ -558,7 +558,7 @@ footer{background:var(--ink);padding:56px 5% 36px;border-top:1px solid #ffffff0a
           <li>Macro & RBI data</li>
           <li>5 AI questions per day</li>
         </ul>
-        <a href="#waitlist" class="btn-price dark">Get Started Free</a>
+        <a href="https://app.blackhubble.com/signup" class="btn-price dark">Get Started Free</a>
       </div>
       <div class="price-card featured">
         <div class="price-pill">MOST POPULAR</div>
@@ -573,7 +573,7 @@ footer{background:var(--ink);padding:56px 5% 36px;border-top:1px solid #ffffff0a
           <li>Earnings calendar with AI preview</li>
           <li>Personalised alerts & insights</li>
         </ul>
-        <a href="#waitlist" class="btn-price light">Get Early Access Free →</a>
+        <a href="https://app.blackhubble.com/signup" class="btn-price light">Get Early Access Free →</a>
       </div>
     </div>
     <p style="color:var(--ink4);font-size:13px;margin-top:24px;">Beta users get Pro free for 3 months. No credit card required.</p>
@@ -586,15 +586,10 @@ footer{background:var(--ink);padding:56px 5% 36px;border-top:1px solid #ffffff0a
   <div class="wl-glow"></div>
   <div class="wl-inner">
     <div class="wl-badge">🇮🇳 Built for India's 12 million investors</div>
-    <h2 class="wl-title">Join the waitlist.<br><em>Get in first.</em></h2>
-    <p class="wl-sub">We're onboarding 500 investors in beta. Connect Zerodha and experience what personalised AI advice actually feels like.</p>
-    <div id="wl-container">
-      <form class="wl-form" onsubmit="handleWaitlist(event)">
-        <input class="wl-input" type="email" id="wl-email" placeholder="Enter your email address" required/>
-        <button type="submit" class="wl-btn">Request Access</button>
-      </form>
-    </div>
-    <p class="wl-note">Invite-only beta · No credit card · No spam ever</p>
+    <h2 class="wl-title">Ready to invest<br><em>smarter?</em></h2>
+    <p class="wl-sub">Connect Zerodha and get personalised AI insights across your entire portfolio. Free to start. No credit card.</p>
+    <a href="https://app.blackhubble.com/signup" class="wl-btn" style="display:inline-block;padding:16px 48px;font-size:16px;border-radius:10px;text-decoration:none;margin-top:16px;">Get Early Access — It's Free →</a>
+    <p class="wl-note">Open beta · No credit card · Works with Zerodha</p>
   </div>
 </section>
 
@@ -644,8 +639,8 @@ footer{background:var(--ink);padding:56px 5% 36px;border-top:1px solid #ffffff0a
   <div class="footer-top">
     <div class="footer-brand">
       <a href="#" class="nav-logo" style="filter:invert(1);">
-        <img class="nav-logo-img" src="./logo.png" alt="BlackHubble" onerror="this.style.display='none'" style="height:36px;filter:brightness(0) invert(1);"/>
-        <span class="nav-logo-text" style="display:none;"></span>
+        <img class="nav-logo-img" src="./logo.png" alt="BlackHubble" onerror="this.style.display='none'" style="height:30px;filter:brightness(0) invert(1);"/>
+        <span class="nav-logo-text" style="color:#fff;font-size:17px;">BlackHubble</span>
       </a>
       <p>AI-powered investment intelligence for Indian retail investors. Your money, your context, your decisions.</p>
     </div>
