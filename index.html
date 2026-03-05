@@ -36,8 +36,8 @@ body{font-family:'Nunito','Poppins',system-ui,sans-serif;background:var(--cream)
 nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 5%;height:68px;display:flex;align-items:center;justify-content:space-between;transition:all 0.4s;background:var(--cream);}
 nav.scrolled{background:#F7F4EEf0;backdrop-filter:blur(24px);border-bottom:1px solid var(--border);box-shadow:0 1px 24px #1A181408;}
 .nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none;}
-.nav-logo-img{height:30px;width:auto;object-fit:contain;}
-.nav-logo-text{font-family:'Poppins','Nunito',system-ui,sans-serif;font-weight:700;font-size:19px;color:var(--ink);letter-spacing:-0.5px;}
+.nav-logo-img{height:40px;width:auto;object-fit:contain;}
+.nav-logo-text{display:none;}
 .nav-links{display:flex;gap:40px;}
 .nav-links a{color:var(--ink3);font-size:13.5px;text-decoration:none;font-weight:500;transition:color 0.2s;letter-spacing:0.1px;}
 .nav-links a:hover{color:var(--ink);}
@@ -52,15 +52,7 @@ nav.scrolled{background:#F7F4EEf0;backdrop-filter:blur(24px);border-bottom:1px s
 .mobile-menu.open{display:flex;}
 .mobile-menu a{color:var(--ink2);font-size:15px;text-decoration:none;padding:14px 0;border-bottom:1px solid var(--border);}
 
-/* ── TICKER ── */
-.ticker-wrap{background:var(--ink);overflow:hidden;padding:10px 0;white-space:nowrap;}
-.ticker-track{display:inline-flex;animation:ticker 40s linear infinite;}
-.ticker-track:hover{animation-play-state:paused;}
-.ticker-item{display:inline-flex;align-items:center;gap:8px;padding:0 32px;font-size:12px;font-weight:500;color:#fff;letter-spacing:0.5px;}
-.ticker-up{color:#4ade80;}
-.ticker-down{color:#f87171;}
-.ticker-sep{color:#ffffff22;margin:0 8px;}
-@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
 
 /* ── HERO ── */
 #hero{min-height:100vh;padding:140px 5% 80px;position:relative;overflow:hidden;display:flex;align-items:center;}
@@ -351,10 +343,7 @@ footer{background:var(--ink);padding:56px 5% 36px;border-top:1px solid #ffffff0a
   <a href="#waitlist" onclick="closeMenu()" style="color:var(--accent);font-weight:700;">Get Early Access →</a>
 </div>
 
-<!-- STOCK TICKER -->
-<div class="ticker-wrap" style="margin-top:68px;">
-  <div class="ticker-track" id="ticker"></div>
-</div>
+
 
 <!-- HERO -->
 <section id="hero">
@@ -655,8 +644,8 @@ footer{background:var(--ink);padding:56px 5% 36px;border-top:1px solid #ffffff0a
   <div class="footer-top">
     <div class="footer-brand">
       <a href="#" class="nav-logo" style="filter:invert(1);">
-        <img class="nav-logo-img" src="./logo.png" alt="BlackHubble" onerror="this.style.display='none'" style="height:24px;"/>
-        <span class="nav-logo-text" style="color:#fff;font-size:17px;">BlackHubble</span>
+        <img class="nav-logo-img" src="./logo.png" alt="BlackHubble" onerror="this.style.display='none'" style="height:36px;filter:brightness(0) invert(1);"/>
+        <span class="nav-logo-text" style="display:none;"></span>
       </a>
       <p>AI-powered investment intelligence for Indian retail investors. Your money, your context, your decisions.</p>
     </div>
@@ -707,18 +696,7 @@ window.addEventListener('scroll',()=>{document.getElementById('nav').classList.t
 function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('open');}
 function closeMenu(){document.getElementById('mobileMenu').classList.remove('open');}
 
-// Stock ticker
-const stocks=[
-  {s:'RELIANCE',p:'1,224',c:'+0.8%',u:true},{s:'TCS',p:'3,892',c:'-0.3%',u:false},
-  {s:'HDFCBANK',p:'1,678',c:'+1.2%',u:true},{s:'ICICIBANK',p:'1,234',c:'+0.5%',u:true},
-  {s:'INFY',p:'1,819',c:'-0.7%',u:false},{s:'SBIN',p:'822',c:'+2.1%',u:true},
-  {s:'BAJFINANCE',p:'8,912',c:'+1.4%',u:true},{s:'WIPRO',p:'291',c:'-0.4%',u:false},
-  {s:'ZOMATO',p:'221',c:'+3.2%',u:true},{s:'TATAMOTORS',p:'742',c:'-1.1%',u:false},
-  {s:'SUNPHARMA',p:'1,724',c:'+0.6%',u:true},{s:'MARUTI',p:'11,845',c:'+0.9%',u:true},
-];
-const track=document.getElementById('ticker');
-const items=stocks.map(s=>`<span class="ticker-item"><strong>${s.s}</strong> ₹${s.p} <span class="${s.u?'ticker-up':'ticker-down'}">${s.c}</span></span><span class="ticker-sep">|</span>`).join('');
-track.innerHTML=items+items; // duplicate for seamless loop
+
 
 // Scroll animations
 const observer=new IntersectionObserver(entries=>{
