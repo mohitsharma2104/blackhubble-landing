@@ -47,23 +47,23 @@ nav.up{background:rgba(248,246,241,.94);backdrop-filter:blur(20px);border-bottom
 .h-soc{display:flex;align-items:center;gap:14px;font-size:12.5px;color:var(--ink4);}
 .avs{display:flex;}.av{width:28px;height:28px;border-radius:50%;border:2px solid var(--bg);background:linear-gradient(135deg,var(--accent),#E8874A);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;color:#fff;margin-left:-7px;font-family:'Poppins',sans-serif;}.av:first-child{margin-left:0;}
 
-.term{background:#1A1810;border-radius:18px;box-shadow:0 32px 80px #18160F22;overflow:hidden;border:1px solid #3a372e;position:relative;}
-.t-bar{background:#111009;padding:13px 18px;display:flex;align-items:center;gap:10px;border-bottom:1px solid #2a2720;}
+.term{background:var(--white);border-radius:18px;box-shadow:0 32px 80px #18160F16,0 2px 8px #18160F08;overflow:hidden;border:1px solid var(--border);position:relative;}
+.t-bar{background:var(--bg2);padding:13px 18px;display:flex;align-items:center;gap:10px;border-bottom:1px solid var(--border);}
 .t-dots{display:flex;gap:6px;}.t-dot{width:10px;height:10px;border-radius:50%;}
-.t-title{flex:1;text-align:center;font-size:11px;color:#ffffff33;letter-spacing:.5px;font-family:'Poppins',sans-serif;}
-.t-live{display:flex;align-items:center;gap:5px;font-size:11px;color:#4ade80;font-weight:600;}.t-live-d{width:5px;height:5px;border-radius:50%;background:#4ade80;animation:pulse 2s infinite;}
-.t-body{padding:20px 18px;display:flex;flex-direction:column;gap:12px;}
+.t-title{flex:1;text-align:center;font-size:11px;color:var(--ink4);letter-spacing:.5px;font-family:'Poppins',sans-serif;}
+.t-live{display:flex;align-items:center;gap:5px;font-size:11px;color:var(--green);font-weight:600;}.t-live-d{width:5px;height:5px;border-radius:50%;background:var(--green);animation:pulse 2s infinite;}
+.t-body{padding:20px 18px;display:flex;flex-direction:column;gap:12px;background:var(--bg);}
 .t-msg{display:flex;gap:10px;align-items:flex-start;}.t-msg.u{flex-direction:row-reverse;}
 .t-av{width:26px;height:26px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;font-family:'Poppins',sans-serif;}
 .t-av.b{background:var(--accent);color:#fff;}.t-av.u{background:#2a2720;color:#C8C4BA;}
 .t-bub{padding:10px 14px;border-radius:11px;font-size:12px;line-height:1.65;max-width:82%;}
-.t-bub.b{background:#222016;border:1px solid #3a372e;color:#C8C4BA;border-radius:4px 11px 11px 11px;}
+.t-bub.b{background:var(--white);border:1px solid var(--border);color:var(--ink2);border-radius:4px 11px 11px 11px;}
 .t-bub.u{background:var(--accent);color:#fff;border-radius:11px 4px 11px 11px;}
-.t-hi{color:#F0A060;font-weight:700;}.t-hi2{color:#4ade80;font-weight:700;}
-.t-agent{background:#1a2a1a;border:1px solid #2a4a2a;border-radius:8px;padding:10px 13px;margin-top:6px;}
-.t-al{font-size:10px;font-weight:700;color:#4ade80;letter-spacing:1px;text-transform:uppercase;margin-bottom:6px;}
-.t-ar{display:flex;align-items:center;gap:8px;font-size:11.5px;color:#88b888;margin-bottom:3px;}.t-ar:last-child{margin-bottom:0;}
-.t-inp{display:flex;gap:8px;padding:0 18px 18px;}.t-inp input{flex:1;background:#1a1810;border:1px solid #2a2720;border-radius:8px;padding:9px 13px;color:#66625A;font-size:12px;outline:none;font-family:inherit;}
+.t-hi{color:var(--accent);font-weight:700;}.t-hi2{color:var(--green);font-weight:700;}
+.t-agent{background:#edfaf3;border:1px solid #b6e8d0;border-radius:8px;padding:10px 13px;margin-top:6px;}
+.t-al{font-size:10px;font-weight:700;color:var(--green);letter-spacing:1px;text-transform:uppercase;margin-bottom:6px;}
+.t-ar{display:flex;align-items:center;gap:8px;font-size:11.5px;color:var(--green);margin-bottom:3px;}.t-ar:last-child{margin-bottom:0;}
+.t-inp{display:flex;gap:8px;padding:0 18px 18px;background:var(--bg);}.t-inp input{flex:1;background:var(--white);border:1px solid var(--border);border-radius:8px;padding:9px 13px;color:var(--ink3);font-size:12px;outline:none;font-family:inherit;}
 .t-send{background:var(--accent);border:none;border-radius:8px;padding:0 14px;color:#fff;cursor:pointer;font-size:14px;}
 .fc{position:absolute;background:var(--white);border:1px solid var(--border);border-radius:12px;padding:12px 16px;box-shadow:0 8px 28px #18160F12;font-size:12px;white-space:nowrap;animation:float 4s ease-in-out infinite;}
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
@@ -84,13 +84,19 @@ section{padding:112px 5%;}
 .s-sub{font-size:17px;color:var(--ink3);line-height:1.8;max-width:540px;}
 
 #problem{background:var(--bg);}
-.prob-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;margin-top:64px;}
-.big-q{font-family:'Poppins',sans-serif;font-size:clamp(20px,2.6vw,34px);font-weight:700;line-height:1.35;letter-spacing:-.8px;color:var(--ink);margin-bottom:28px;}
-.big-q em{color:var(--accent);font-style:italic;}
-.p-cards{display:flex;flex-direction:column;gap:12px;}
-.p-card{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:20px 22px;display:flex;gap:14px;align-items:flex-start;transition:all .2s;}.p-card:hover{border-color:var(--accent);transform:translateX(4px);}
-.p-num{font-family:'Poppins',sans-serif;font-size:26px;font-weight:900;color:var(--bg3);line-height:1;flex-shrink:0;width:34px;}
-.p-card h3{font-size:14px;font-weight:700;color:var(--ink);margin-bottom:5px;}.p-card p{font-size:13px;color:var(--ink3);line-height:1.7;}
+.prob-flow{display:flex;align-items:center;justify-content:center;gap:0;flex-wrap:wrap;margin-bottom:64px;background:var(--white);border:1px solid var(--border);border-radius:20px;padding:40px 32px;}
+.pf-item{display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 24px;}
+.pf-item-bh{background:var(--ink);border-radius:14px;padding:20px 28px;margin:-20px 0;}
+.pf-icon{font-size:28px;margin-bottom:10px;}
+.pf-label{font-family:'Poppins',sans-serif;font-size:13px;font-weight:700;color:var(--ink);margin-bottom:4px;white-space:nowrap;}
+.pf-desc{font-size:12px;color:var(--ink3);}
+.pf-item-bh .pf-label{color:var(--accent)!important;}.pf-item-bh .pf-desc{color:#ffffff66;}
+.pf-arrow{font-size:22px;color:var(--border2);padding:0 4px;flex-shrink:0;}.pf-accent{color:var(--accent);}
+.prob-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;background:var(--white);border:1px solid var(--border);border-radius:20px;overflow:hidden;}
+.ps-item{padding:32px 28px;text-align:center;}
+.ps-num{font-family:'Poppins',sans-serif;font-size:clamp(28px,3vw,44px);font-weight:900;color:var(--ink);letter-spacing:-2px;margin-bottom:10px;}
+.ps-label{font-size:12.5px;color:var(--ink3);line-height:1.6;}
+.ps-div{width:1px;background:var(--border);}
 
 #how{background:var(--white);}
 .how-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;margin-top:64px;}
@@ -108,16 +114,23 @@ section{padding:112px 5%;}
 .d-mv{font-family:'Poppins',sans-serif;font-size:20px;font-weight:800;color:var(--ink);letter-spacing:-1px;}
 .d-ms{font-size:11px;margin-top:3px;}.up{color:var(--green);}.dn{color:var(--accent);}
 
-#agents{background:var(--ink);position:relative;overflow:hidden;}
-.ag-bg{position:absolute;inset:0;background-image:linear-gradient(#ffffff05 1px,transparent 1px),linear-gradient(90deg,#ffffff05 1px,transparent 1px);background-size:60px 60px;}
-.ag-glow{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:700px;height:400px;background:radial-gradient(ellipse,#C8501A18 0%,transparent 65%);}
+#agents{background:var(--bg2);position:relative;overflow:hidden;}
+.ag-bg{position:absolute;inset:0;background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px);background-size:60px 60px;opacity:.4;}
+.ag-glow{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:700px;height:400px;background:radial-gradient(ellipse,#C8501A08 0%,transparent 65%);}
 .ag-inner{max-width:1160px;margin:0 auto;position:relative;}
 .ag-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:56px;}
-.ag-card{background:#ffffff09;border:1px solid #ffffff10;border-radius:16px;padding:26px 22px;transition:all .25s;}.ag-card:hover{background:#ffffff14;border-color:#C8501A44;transform:translateY(-4px);}
-.ag-icon{width:44px;height:44px;border-radius:10px;background:#ffffff0f;border:1px solid #ffffff15;display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:16px;}
-.ag-name{font-family:'Poppins',sans-serif;font-size:15px;font-weight:700;color:#fff;margin-bottom:7px;letter-spacing:-.3px;}
-.ag-desc{font-size:13px;color:#ffffff50;line-height:1.7;margin-bottom:14px;}
+.ag-card{background:var(--white);border:1px solid var(--border);border-radius:16px;padding:26px 22px;transition:all .25s;}.ag-card:hover{background:var(--white);border-color:var(--accent);transform:translateY(-4px);box-shadow:0 12px 36px #18160F0C;}
+.ag-icon{width:44px;height:44px;border-radius:10px;background:var(--bg);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:16px;}
+.ag-name{font-family:'Poppins',sans-serif;font-size:15px;font-weight:700;color:var(--ink);margin-bottom:7px;letter-spacing:-.3px;}
+.ag-desc{font-size:13px;color:var(--ink3);line-height:1.7;margin-bottom:14px;}
 .ag-tag{display:inline-flex;align-items:center;gap:5px;font-size:10.5px;font-weight:700;color:var(--accent);letter-spacing:.5px;}.ag-tag::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--accent);}
+.ag-specs{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:12px;}
+.ag-spec{background:var(--bg2);border:1px solid var(--border);border-radius:4px;padding:2px 8px;font-size:10.5px;color:var(--ink3);font-weight:600;}
+.ag-memory-bar{display:flex;align-items:center;gap:20px;background:var(--white);border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:14px;padding:20px 28px;margin-top:24px;}
+.amb-icon{font-size:24px;flex-shrink:0;}
+.amb-text{font-size:14px;color:var(--ink3);flex:1;line-height:1.6;}
+.amb-text strong{color:var(--ink);}
+.amb-badge{background:var(--accent-bg);border:1px solid #C8501A22;border-radius:99px;padding:5px 14px;font-size:11.5px;font-weight:700;color:var(--accent);white-space:nowrap;}
 
 #human{background:var(--bg2);}
 .human-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;margin-top:64px;}
@@ -230,6 +243,54 @@ footer{background:var(--ink);padding:52px 5% 32px;}
   .ft-top{grid-template-columns:1fr;}
   .ft-bot{flex-direction:column;text-align:center;}
 }
+
+.bh-terminal-demo{background:var(--white);border:1px solid var(--border);border-radius:18px;overflow:hidden;box-shadow:0 24px 64px #18160F10;}
+.bhtd-bar{background:var(--bg2);padding:12px 16px;display:flex;align-items:center;gap:10px;border-bottom:1px solid var(--border);}
+.bhtd-dots{display:flex;gap:5px;}.bhtd-dots span{width:10px;height:10px;border-radius:50%;display:block;}
+.bhtd-title{flex:1;text-align:center;font-size:11px;color:var(--ink4);font-family:'Poppins',sans-serif;letter-spacing:.3px;}
+.bhtd-status{display:flex;align-items:center;gap:5px;font-size:11px;color:var(--green);font-weight:700;}
+.bhtd-dot{width:5px;height:5px;border-radius:50%;background:var(--green);animation:pulse 2s infinite;}
+.bhtd-ctx{background:var(--green-bg);border-bottom:1px solid #b6e8d0;padding:10px 16px;display:flex;align-items:center;gap:12px;}
+.bhtd-ctx-label{font-size:10.5px;font-weight:700;color:var(--green);letter-spacing:.5px;text-transform:uppercase;white-space:nowrap;}
+.bhtd-ctx-tags{display:flex;gap:6px;flex-wrap:wrap;}.bhtd-ctx-tags span{background:#fff;border:1px solid #b6e8d0;border-radius:4px;padding:2px 8px;font-size:11px;color:var(--ink2);font-weight:600;}
+.bhtd-chat{padding:16px 16px 8px;display:flex;flex-direction:column;gap:12px;background:var(--bg);}
+.bhtd-msg{display:flex;gap:8px;align-items:flex-start;}.bhtd-msg.user{flex-direction:row-reverse;}
+.bhtd-av{width:24px;height:24px;border-radius:50%;background:var(--ink);color:var(--bg);display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:800;font-family:'Poppins',sans-serif;flex-shrink:0;}
+.bhtd-av.bot{background:var(--accent);}
+.bhtd-bub{padding:10px 13px;border-radius:10px;font-size:12.5px;line-height:1.6;max-width:88%;}
+.bhtd-bub.user{background:var(--accent);color:#fff;border-radius:10px 3px 10px 10px;}
+.bhtd-bub.bot{background:var(--white);border:1px solid var(--border);color:var(--ink2);border-radius:3px 10px 10px 10px;}
+.bhtd-thinking{display:flex;align-items:center;gap:8px;padding:4px 32px;}
+.bhtd-think-dot{width:6px;height:6px;border-radius:50%;background:var(--accent);animation:pulse 1s infinite;flex-shrink:0;}
+.bhtd-result{background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:10px 12px;margin-bottom:10px;display:flex;flex-direction:column;gap:6px;}
+.bhtd-result-row{display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:11.5px;flex-wrap:wrap;}
+.bhtd-r-label{color:var(--ink3);font-weight:600;}.bhtd-r-val{font-weight:700;}.bhtd-r-val.green{color:var(--green);}.bhtd-r-val.orange{color:var(--accent);}
+.bhtd-verdict{font-size:12.5px;color:var(--ink2);line-height:1.65;}
+.bhtd-orange{color:var(--accent);font-weight:700;}.bhtd-green{color:var(--green);font-weight:700;}
+.bhtd-inp{display:flex;gap:8px;padding:10px 16px;background:var(--bg);border-top:1px solid var(--border);}
+.bhtd-inp input{flex:1;background:var(--white);border:1px solid var(--border);border-radius:8px;padding:9px 13px;font-size:12px;color:var(--ink3);outline:none;font-family:inherit;}
+.bhtd-inp button{background:var(--accent);border:none;border-radius:8px;padding:0 14px;color:#fff;cursor:pointer;font-size:14px;}
+
+.mod-showcase{display:grid;grid-template-columns:220px 1fr 220px;gap:16px;align-items:start;}
+.ms-col-label{font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:6px 12px;border-radius:6px;margin-bottom:10px;display:inline-block;}
+.live-label{background:var(--green-bg);color:var(--green);}
+.soon-label{background:var(--bg3);color:var(--ink4);}
+.ms-card{background:var(--white);border:1.5px solid var(--border);border-radius:12px;padding:14px 16px;display:flex;align-items:center;gap:12px;margin-bottom:8px;cursor:pointer;transition:all .2s;}
+.ms-card:hover,.ms-card.active{border-color:var(--accent);background:var(--accent-bg);}
+.ms-card-icon{font-size:20px;flex-shrink:0;}
+.ms-card-name{font-family:'Poppins',sans-serif;font-size:13px;font-weight:700;color:var(--ink);margin-bottom:2px;}
+.ms-card-desc{font-size:11px;color:var(--ink3);}
+.ms-card-info{flex:1;}
+.ms-card-arr{color:var(--accent);font-size:16px;opacity:0;transition:opacity .2s;}.ms-card:hover .ms-card-arr{opacity:1;}
+.ms-preview{background:var(--ink);border-radius:16px;padding:36px 32px;min-height:320px;display:flex;align-items:center;position:sticky;top:100px;}
+.ms-pv-tag{margin-bottom:14px;display:inline-block;}
+.ms-pv-name{font-family:'Poppins',sans-serif;font-size:24px;font-weight:800;color:#fff;letter-spacing:-1px;margin-bottom:10px;}
+.ms-pv-desc{font-size:14px;color:#ffffff55;line-height:1.7;margin-bottom:20px;}
+.ms-pv-features{display:flex;flex-direction:column;gap:8px;margin-bottom:24px;}
+.ms-pv-feat{display:flex;align-items:center;gap:8px;font-size:13px;color:#ffffff66;}.ms-pv-feat::before{content:'→';color:var(--accent);font-weight:700;}
+.ms-pv-cta{display:inline-block;background:var(--accent);color:#fff;font-size:13.5px;font-weight:700;padding:10px 24px;border-radius:8px;text-decoration:none;transition:all .2s;}.ms-pv-cta:hover{background:var(--accent2);}
+.ms-live-col,.ms-soon-col{display:flex;flex-direction:column;}
+@media(max-width:960px){.mod-showcase{grid-template-columns:1fr;}.ms-preview{position:static;}}
 </style>
 </head>
 <body>
@@ -289,7 +350,7 @@ footer{background:var(--ink);padding:52px 5% 32px;}
         <span>50+ investors already using BlackHubble</span>
       </div>
     </div>
-    <div style="position:relative;">
+    <div style="position:relative;padding:24px 28px 24px 28px;">
       <div class="fc fc1"><div class="f-label">Portfolio Today</div><div class="f-val">₹4,82,340 <span style="font-size:11px;color:var(--green)">▲ +1.8%</span></div></div>
       <div class="fc fc2"><div class="f-label">Agent Alert</div><div class="f-val" style="font-size:12px;">Tax-loss harvest window open ⚡</div></div>
       <div class="term">
@@ -326,21 +387,53 @@ footer{background:var(--ink);padding:52px 5% 32px;}
 <!-- PROBLEM -->
 <section id="problem">
   <div class="s-inner">
-    <p class="eyebrow fade">The Problem</p>
-    <h2 class="s-h fade">Terminals are dashboards.<br><span class="g">Not thinking tools.</span></h2>
-    <div class="prob-grid">
-      <div class="fade">
-        <div class="big-q">
-          "There's a hypothesis in every investor's mind — consciously or subconsciously. Something they're trying to validate as they jump across charts, news, fundamentals and macros.
-          <em>But terminals today are static. Passive. Reactive.</em>"
-        </div>
-        <p style="color:var(--ink3);font-size:15px;line-height:1.8;">So we asked ourselves — why not rebuild the terminal from scratch to do exactly that? <strong style="color:var(--ink)">BlackHubble is built to test and validate ideas. Not just observe data.</strong></p>
+    <p class="eyebrow fade" style="text-align:center;">The Problem</p>
+    <h2 class="s-h fade" style="text-align:center;max-width:700px;margin:0 auto 16px;">Terminals are dashboards.<br><span class="g">Not thinking tools.</span></h2>
+    <p class="fade" style="text-align:center;color:var(--ink3);font-size:16px;max-width:560px;margin:0 auto 72px;line-height:1.75;">There's a hypothesis in every investor's mind. <em>Something they're trying to validate.</em> But terminals today are static, passive, reactive — they show data, not answers.</p>
+    <div class="prob-flow fade">
+      <div class="pf-item">
+        <div class="pf-icon">📊</div>
+        <div class="pf-label">Data overload</div>
+        <div class="pf-desc">50 ratios. No context.</div>
       </div>
-      <div class="p-cards fade fd1">
-        <div class="p-card"><div class="p-num">01</div><div><h3>Data without context</h3><p>You stare at 50 ratios and still aren't sure whether to buy, hold or exit. The data is there — it just doesn't tell you anything.</p></div></div>
-        <div class="p-card"><div class="p-num">02</div><div><h3>No hypothesis testing</h3><p>You have an idea — "pharma recovers after FDA news" — but no tool to validate it on real NSE/BSE historical data.</p></div></div>
-        <div class="p-card"><div class="p-num">03</div><div><h3>Generic advice, zero context</h3><p>Market news has zero knowledge of your portfolio. "Buy Reliance" — you already hold 30% in Oil &amp; Gas.</p></div></div>
-        <div class="p-card"><div class="p-num">04</div><div><h3>Research trail lost</h3><p>Every session starts from scratch. Your past hypotheses, tested ideas and insights — gone. Never persisted across sessions.</p></div></div>
+      <div class="pf-arrow">→</div>
+      <div class="pf-item">
+        <div class="pf-icon">🔀</div>
+        <div class="pf-label">Platform hopping</div>
+        <div class="pf-desc">Charts → News → Screener → Macro</div>
+      </div>
+      <div class="pf-arrow">→</div>
+      <div class="pf-item">
+        <div class="pf-icon">❓</div>
+        <div class="pf-label">Still no answer</div>
+        <div class="pf-desc">Buy? Hold? Exit? Unclear.</div>
+      </div>
+      <div class="pf-arrow pf-accent">→</div>
+      <div class="pf-item pf-item-bh">
+        <div class="pf-icon">🔭</div>
+        <div class="pf-label" style="color:var(--accent);">BlackHubble</div>
+        <div class="pf-desc">Validate instantly. Decide.</div>
+      </div>
+    </div>
+    <div class="prob-stats fade fd1">
+      <div class="ps-item">
+        <div class="ps-num">12M+</div>
+        <div class="ps-label">Indian retail investors with no institutional-grade tools</div>
+      </div>
+      <div class="ps-div"></div>
+      <div class="ps-item">
+        <div class="ps-num">0</div>
+        <div class="ps-label">Platforms that let you test a hypothesis on NSE/BSE data today</div>
+      </div>
+      <div class="ps-div"></div>
+      <div class="ps-item">
+        <div class="ps-num">45 min</div>
+        <div class="ps-label">Average time spent staring at charts before making a decision</div>
+      </div>
+      <div class="ps-div"></div>
+      <div class="ps-item">
+        <div class="ps-num">60 sec</div>
+        <div class="ps-label" style="color:var(--accent);font-weight:700;">Time to validate any hypothesis with BlackHubble</div>
       </div>
     </div>
   </div>
@@ -380,16 +473,81 @@ footer{background:var(--ink);padding:52px 5% 32px;}
 <section id="agents">
   <div class="ag-bg"></div><div class="ag-glow"></div>
   <div class="ag-inner">
-    <p class="eyebrow fade" style="color:var(--accent)">AI Agents</p>
-    <h2 class="s-h fade" style="color:#fff;">Not alerts. <span style="color:var(--accent);font-style:italic;">Intelligent agents.</span></h2>
-    <p class="s-sub fade" style="color:#ffffff44;margin-bottom:0;">Autonomous agents that react to live market changes, run backtests across multiple datasets, persist memory across sessions — and always know your portfolio. It's not just data access — it's agent-driven insight and action.</p>
+    <p class="eyebrow fade">AI Agents</p>
+    <h2 class="s-h fade">Not alerts. <span style="color:var(--accent);font-style:italic;">Intelligent agents.</span></h2>
+    <p class="s-sub fade">Autonomous agents that react to live market changes, run backtests across fundamentals, prices, macro and alternative data — persist memory across sessions — and always know your portfolio.</p>
     <div class="ag-grid">
-      <div class="ag-card fade"><div class="ag-icon">🔭</div><div class="ag-name">Hypothesis Agent</div><div class="ag-desc">Run compute-heavy backtests on NSE/BSE data instantly. "What happens to FMCG 3 weeks after RBI cuts?" Validated in seconds.</div><div class="ag-tag">Backtesting engine</div></div>
-      <div class="ag-card fade fd1"><div class="ag-icon">👁️</div><div class="ag-name">Watchlist Agent</div><div class="ag-desc">Spin up agents that react to live market conditions — FII flows, PCR divergence, sector rotations. Fires when your criteria match.</div><div class="ag-tag">Event-driven triggers</div></div>
-      <div class="ag-card fade fd2"><div class="ag-icon">📊</div><div class="ag-name">Portfolio Agent</div><div class="ag-desc">Continuously monitors your holdings for concentration risk, tax-loss harvesting windows and rebalancing signals.</div><div class="ag-tag">Always-on watch</div></div>
-      <div class="ag-card fade"><div class="ag-icon">📰</div><div class="ag-name">News Agent</div><div class="ag-desc">Filters every market news item against your holdings. Only surfaces news that actually impacts the stocks you own.</div><div class="ag-tag">Portfolio-filtered signals</div></div>
-      <div class="ag-card fade fd1"><div class="ag-icon">🌐</div><div class="ag-name">Macro Agent</div><div class="ag-desc">Tracks RBI decisions, inflation, FII/DII flows. Chains multi-hop logic — if FII outflows spike and earnings miss, surfaces affected sectors.</div><div class="ag-tag">Multi-hop workflows</div></div>
-      <div class="ag-card fade fd2"><div class="ag-icon">⚡</div><div class="ag-name">Options Agent</div><div class="ag-desc">Scans F&amp;O chains for unusual OI buildup, PCR divergence and IV crush setups — filtered to your current positions.</div><div class="ag-tag">F&amp;O intelligence</div></div>
+      <div class="ag-card fade">
+        <div class="ag-icon">🔭</div>
+        <div class="ag-name">Hypothesis Agent</div>
+        <div class="ag-desc">Run compute-heavy backtests across NSE/BSE fundamentals, prices, macro and alternative data. Natural language input — no code needed.</div>
+        <div class="ag-specs">
+          <span class="ag-spec">NSE/BSE 5-yr data</span>
+          <span class="ag-spec">Multi-dataset</span>
+          <span class="ag-spec">Win rate + returns</span>
+        </div>
+        <div class="ag-tag">Backtesting engine</div>
+      </div>
+      <div class="ag-card fade fd1">
+        <div class="ag-icon">👁️</div>
+        <div class="ag-name">Watchlist Agent</div>
+        <div class="ag-desc">Spin up agents that react to live market conditions — FII flows above threshold, PCR divergence, sector rotation signals. Fires when criteria match.</div>
+        <div class="ag-specs">
+          <span class="ag-spec">Real-time triggers</span>
+          <span class="ag-spec">FII/DII data</span>
+          <span class="ag-spec">Custom conditions</span>
+        </div>
+        <div class="ag-tag">Event-driven triggers</div>
+      </div>
+      <div class="ag-card fade fd2">
+        <div class="ag-icon">📊</div>
+        <div class="ag-name">Portfolio Agent</div>
+        <div class="ag-desc">Monitors your holdings across all brokers — concentration risk, sector overlap, tax-loss harvesting windows, and rebalancing signals.</div>
+        <div class="ag-specs">
+          <span class="ag-spec">Multi-broker</span>
+          <span class="ag-spec">Risk scoring</span>
+          <span class="ag-spec">Tax optimization</span>
+        </div>
+        <div class="ag-tag">Always-on watch</div>
+      </div>
+      <div class="ag-card fade">
+        <div class="ag-icon">📰</div>
+        <div class="ag-name">News Agent</div>
+        <div class="ag-desc">Filters every news item — earnings, corporate actions, regulatory changes — against your actual holdings. Zero noise.</div>
+        <div class="ag-specs">
+          <span class="ag-spec">Portfolio-filtered</span>
+          <span class="ag-spec">Earnings impact</span>
+          <span class="ag-spec">Corp actions</span>
+        </div>
+        <div class="ag-tag">Portfolio-filtered signals</div>
+      </div>
+      <div class="ag-card fade fd1">
+        <div class="ag-icon">🌐</div>
+        <div class="ag-name">Macro Agent</div>
+        <div class="ag-desc">Tracks RBI rate decisions, CPI, FII/DII flows, GST data. Chains multi-hop logic — FII outflows spike + earnings miss → affected sectors → your holdings impact.</div>
+        <div class="ag-specs">
+          <span class="ag-spec">RBI + CPI data</span>
+          <span class="ag-spec">Multi-hop logic</span>
+          <span class="ag-spec">Sector mapping</span>
+        </div>
+        <div class="ag-tag">Multi-hop workflows</div>
+      </div>
+      <div class="ag-card fade fd2">
+        <div class="ag-icon">⚡</div>
+        <div class="ag-name">Options Agent</div>
+        <div class="ag-desc">Scans F&amp;O chains for unusual OI buildup, PCR divergence, IV crush setups and max pain levels — filtered to your existing positions.</div>
+        <div class="ag-specs">
+          <span class="ag-spec">OI analysis</span>
+          <span class="ag-spec">PCR tracking</span>
+          <span class="ag-spec">IV crush alerts</span>
+        </div>
+        <div class="ag-tag">F&amp;O intelligence</div>
+      </div>
+    </div>
+    <div class="ag-memory-bar fade">
+      <div class="amb-icon">🧠</div>
+      <div class="amb-text"><strong>All agents persist memory across sessions.</strong> Your research trail, tested hypotheses and portfolio context — never lost. Pick up exactly where you left off.</div>
+      <div class="amb-badge">Memory-persistent</div>
     </div>
   </div>
 </section>
@@ -401,16 +559,53 @@ footer{background:var(--ink);padding:52px 5% 32px;}
     <h2 class="s-h fade">No charts to decode.<br><span class="g">Just ask. Get answers.</span></h2>
     <p class="s-sub fade" style="margin-bottom:64px;">Complex graphs tell you nothing if you can't act on them. BlackHubble replaces dashboards with conversations — you discuss markets in plain English, and intelligent agents do the analytical heavy lifting.</p>
     <div class="human-grid fade">
-      <div class="old-new">
-        <div class="old-box">
-          <div class="box-label" style="color:var(--ink4)">Traditional Terminal</div>
-          <div class="box-h">Candle charts. RSI. MACD. Bollinger Bands.</div>
-          <p class="box-p">You stare at charts for 45 minutes. Jump across platforms — screener, charts, news, macro. Still not sure whether to buy, hold or exit. The data is all there. It just doesn't <em>tell you anything.</em></p>
+      <div class="bh-terminal-demo">
+        <div class="bhtd-bar">
+          <div class="bhtd-dots"><span style="background:#ff5f57"></span><span style="background:#febc2e"></span><span style="background:#28c840"></span></div>
+          <div class="bhtd-title">BlackHubble — Live Session</div>
+          <div class="bhtd-status"><span class="bhtd-dot"></span>Connected · Zerodha</div>
         </div>
-        <div class="new-box">
-          <div class="box-label">BlackHubble</div>
-          <div class="box-h">"Should I add to my HDFC position before the RBI meeting?"</div>
-          <p class="box-p">BlackHubble checks your current allocation, runs the historical RBI-HDFC correlation backtest, and tells you — in plain English — exactly what the data suggests for <em>your specific portfolio.</em></p>
+        <div class="bhtd-ctx">
+          <div class="bhtd-ctx-label">Portfolio context loaded</div>
+          <div class="bhtd-ctx-tags">
+            <span>₹4.8L portfolio</span>
+            <span>23% pharma</span>
+            <span>7.2/10 risk</span>
+            <span>14 hypotheses run</span>
+          </div>
+        </div>
+        <div class="bhtd-chat">
+          <div class="bhtd-msg user">
+            <div class="bhtd-av">M</div>
+            <div class="bhtd-bub user">Should I add to my HDFC position before the RBI meeting?</div>
+          </div>
+          <div class="bhtd-thinking">
+            <span class="bhtd-think-dot"></span>
+            <span style="font-size:11px;color:var(--ink4);">Agent running RBI-HDFC correlation backtest (2019–2024)...</span>
+          </div>
+          <div class="bhtd-msg bot">
+            <div class="bhtd-av bot">B</div>
+            <div class="bhtd-bub bot">
+              <div class="bhtd-result">
+                <div class="bhtd-result-row"><span class="bhtd-r-label">Historical pattern</span><span class="bhtd-r-val green">HDFC +2.8% avg in 10 days post RBI cut</span></div>
+                <div class="bhtd-result-row"><span class="bhtd-r-label">Win rate</span><span class="bhtd-r-val green">74% across 19 matching events</span></div>
+                <div class="bhtd-result-row"><span class="bhtd-r-label">Your current allocation</span><span class="bhtd-r-val orange">HDFC at 8.2% — within target range ✓</span></div>
+              </div>
+              <div class="bhtd-verdict">Adding a small position is supported by data. <strong>Watch ₹1,820 as entry level.</strong> Risk is RBI holding rates — 32% probability based on CPI trend.</div>
+            </div>
+          </div>
+          <div class="bhtd-msg user">
+            <div class="bhtd-av">M</div>
+            <div class="bhtd-bub user">What's the risk if RBI holds?</div>
+          </div>
+          <div class="bhtd-msg bot">
+            <div class="bhtd-av bot">B</div>
+            <div class="bhtd-bub bot">In 6 of 19 hold scenarios, HDFC fell avg <span class="bhtd-orange">-1.4%</span> in the following week. Given your position size, that's approximately <span class="bhtd-orange">₹3,200 downside</span> on a ₹50,000 add. <span class="bhtd-green">Manageable. Proceed with stop-loss at ₹1,790.</span></div>
+          </div>
+        </div>
+        <div class="bhtd-inp">
+          <input type="text" placeholder="Ask anything about your portfolio..." readonly/>
+          <button>↑</button>
         </div>
       </div>
       <div class="human-list">
@@ -426,19 +621,53 @@ footer{background:var(--ink);padding:52px 5% 32px;}
 <!-- MODULES -->
 <section id="modules">
   <div class="s-inner">
-    <div class="mod-header">
-      <div class="fade"><p class="eyebrow">13 Modules</p><h2 class="s-h" style="margin-bottom:0;">One terminal.<br><span class="g">Built for NSE &amp; BSE.</span></h2></div>
-      <p class="fade" style="color:var(--ink3);font-size:14px;max-width:260px;line-height:1.7;">Every module is portfolio-aware. Every insight knows your positions.</p>
-    </div>
-    <div class="mod-grid">
-      <div class="mod fade"><span class="m-status live">Live</span><span class="m-icon">📊</span><div class="m-name">Stock Screener</div><div class="m-desc">Filter 1,400+ NSE/BSE stocks by PE, ROE, FII%, sector and 50+ parameters.</div></div>
-      <div class="mod fade fd1"><span class="m-status live">Live</span><span class="m-icon">💼</span><div class="m-name">Portfolio</div><div class="m-desc">Unified P&amp;L, allocation heatmap and risk analytics across all brokers.</div></div>
-      <div class="mod fade fd2"><span class="m-status soon">Soon</span><span class="m-icon">🔭</span><div class="m-name">Hypothesis Testing</div><div class="m-desc">Backtest any market idea on real NSE/BSE historical data. No code needed.</div></div>
-      <div class="mod fade fd3"><span class="m-status soon">Soon</span><span class="m-icon">🤖</span><div class="m-name">AI Agents</div><div class="m-desc">Autonomous agents that react to events and persist memory across sessions.</div></div>
-      <div class="mod fade"><span class="m-status soon">Soon</span><span class="m-icon">🔵</span><div class="m-name">Options Screener</div><div class="m-desc">Unusual OI, PCR ratios, IV crush setups — filtered to your F&amp;O positions.</div></div>
-      <div class="mod fade fd1"><span class="m-status soon">Soon</span><span class="m-icon">📈</span><div class="m-name">Fundamentals</div><div class="m-desc">Quarterly results, promoter holdings, FII/DII flows and 10-year financials.</div></div>
-      <div class="mod fade fd2"><span class="m-status soon">Soon</span><span class="m-icon">📅</span><div class="m-name">Earnings Calendar</div><div class="m-desc">AI-predicted moves before results, based on historical patterns for your stocks.</div></div>
-      <div class="mod fade fd3"><span class="m-status soon">Soon</span><span class="m-icon">🌐</span><div class="m-name">Macro &amp; RBI</div><div class="m-desc">Repo rate, CPI, GST — mapped to their real impact on your portfolio sectors.</div></div>
+    <p class="eyebrow fade" style="text-align:center;">The Platform</p>
+    <h2 class="s-h fade" style="text-align:center;max-width:600px;margin:0 auto 14px;">One terminal.<br><span class="g">13 modules. All portfolio-aware.</span></h2>
+    <p class="fade" style="text-align:center;color:var(--ink3);font-size:15px;max-width:480px;margin:0 auto 64px;">Every insight knows your positions. Every module feeds every other. It's not a collection of tools — it's one interconnected system.</p>
+    <div class="mod-showcase fade">
+      <div class="ms-live-col">
+        <div class="ms-col-label live-label">⚡ Live Now</div>
+        <div class="ms-card live-card" onclick="setActiveModule('screener')">
+          <div class="ms-card-icon">📊</div>
+          <div class="ms-card-info">
+            <div class="ms-card-name">Stock Screener</div>
+            <div class="ms-card-desc">1,400+ NSE/BSE stocks · 50+ filters</div>
+          </div>
+          <div class="ms-card-arr">→</div>
+        </div>
+        <div class="ms-card live-card" onclick="setActiveModule('portfolio')">
+          <div class="ms-card-icon">💼</div>
+          <div class="ms-card-info">
+            <div class="ms-card-name">Portfolio</div>
+            <div class="ms-card-desc">P&amp;L · Heatmap · Risk analytics</div>
+          </div>
+          <div class="ms-card-arr">→</div>
+        </div>
+      </div>
+      <div class="ms-preview" id="modPreview">
+        <div class="ms-preview-inner" id="modPreviewContent">
+          <div class="ms-pv-tag live-label">⚡ Live</div>
+          <div class="ms-pv-name">Stock Screener</div>
+          <div class="ms-pv-desc">Filter 1,400+ NSE/BSE stocks using 50+ parameters. AI ranks results by relevance to your portfolio and investment style.</div>
+          <div class="ms-pv-features">
+            <div class="ms-pv-feat">PE · PB · ROE · ROCE · EPS growth</div>
+            <div class="ms-pv-feat">FII% · DII% · Promoter holding</div>
+            <div class="ms-pv-feat">52-week high/low · Volume surge</div>
+            <div class="ms-pv-feat">Sector filter · Market cap filter</div>
+            <div class="ms-pv-feat">AI portfolio fit score</div>
+          </div>
+          <a href="https://app.blackhubble.com/signup" class="ms-pv-cta">Try it free →</a>
+        </div>
+      </div>
+      <div class="ms-soon-col">
+        <div class="ms-col-label soon-label">🔮 Coming Soon</div>
+        <div class="ms-card soon-card" onclick="setActiveModule('hypothesis')"><div class="ms-card-icon">🔭</div><div class="ms-card-info"><div class="ms-card-name">Hypothesis Testing</div><div class="ms-card-desc">Backtest any idea · No code</div></div></div>
+        <div class="ms-card soon-card" onclick="setActiveModule('agents')"><div class="ms-card-icon">🤖</div><div class="ms-card-info"><div class="ms-card-name">AI Agents</div><div class="ms-card-desc">Autonomous · Memory-persistent</div></div></div>
+        <div class="ms-card soon-card" onclick="setActiveModule('options')"><div class="ms-card-icon">⚡</div><div class="ms-card-info"><div class="ms-card-name">Options Screener</div><div class="ms-card-desc">OI · PCR · IV crush · Max pain</div></div></div>
+        <div class="ms-card soon-card" onclick="setActiveModule('fundamentals')"><div class="ms-card-icon">📈</div><div class="ms-card-info"><div class="ms-card-name">Fundamentals</div><div class="ms-card-desc">Quarterly results · 10-yr data</div></div></div>
+        <div class="ms-card soon-card" onclick="setActiveModule('earnings')"><div class="ms-card-icon">📅</div><div class="ms-card-info"><div class="ms-card-name">Earnings Calendar</div><div class="ms-card-desc">AI-predicted moves · Pre-results</div></div></div>
+        <div class="ms-card soon-card" onclick="setActiveModule('macro')"><div class="ms-card-icon">🌐</div><div class="ms-card-info"><div class="ms-card-name">Macro &amp; RBI</div><div class="ms-card-desc">Rate impact · CPI · FII/DII flows</div></div></div>
+      </div>
     </div>
   </div>
 </section>
@@ -516,7 +745,7 @@ footer{background:var(--ink);padding:52px 5% 32px;}
         <p class="eyebrow">Careers</p>
         <h2>Build the thinking terminal for India.</h2>
         <p>Small team. Massive market. If you're obsessed with AI, fintech and making complex things simple for a billion people — we want to talk.</p>
-        <a href="mailto:business@blackhubble.com" class="btn-acc">Send Us Your Story →</a>
+        <a href="/cdn-cgi/l/email-protection#debcabadb7b0bbadad9ebcb2bfbdb5b6abbcbcb2bbf0bdb1b3" class="btn-acc">Send Us Your Story →</a>
       </div>
       <div class="car-vals">
         <div class="val-item"><div class="val-icon">🚀</div><div class="val-text"><h4>Ship fast</h4><p>Weekly deploys. Real users. No bureaucracy.</p></div></div>
@@ -526,10 +755,10 @@ footer{background:var(--ink);padding:52px 5% 32px;}
       </div>
     </div>
     <div class="jobs-grid fade">
-      <a href="mailto:business@blackhubble.com" class="job-card"><div><div class="job-dept">Engineering</div><div class="job-title">Full Stack Engineer</div><div class="job-meta">Remote · Full-time</div></div><span class="job-arr">→</span></a>
-      <a href="mailto:business@blackhubble.com" class="job-card"><div><div class="job-dept">AI / ML</div><div class="job-title">AI/ML Engineer</div><div class="job-meta">Remote · Full-time</div></div><span class="job-arr">→</span></a>
-      <a href="mailto:business@blackhubble.com" class="job-card"><div><div class="job-dept">Product</div><div class="job-title">Product Designer</div><div class="job-meta">Remote · Full-time</div></div><span class="job-arr">→</span></a>
-      <a href="mailto:business@blackhubble.com" class="job-card"><div><div class="job-dept">Growth</div><div class="job-title">Growth &amp; Marketing</div><div class="job-meta">Remote · Full-time</div></div><span class="job-arr">→</span></a>
+      <a href="/cdn-cgi/l/email-protection#6d0f181e0403081e1e2d0f010c0e0605180f0f0108430e0200" class="job-card"><div><div class="job-dept">Engineering</div><div class="job-title">Full Stack Engineer</div><div class="job-meta">Remote · Full-time</div></div><span class="job-arr">→</span></a>
+      <a href="/cdn-cgi/l/email-protection#9efcebedf7f0fbededdefcf2fffdf5f6ebfcfcf2fbb0fdf1f3" class="job-card"><div><div class="job-dept">AI / ML</div><div class="job-title">AI/ML Engineer</div><div class="job-meta">Remote · Full-time</div></div><span class="job-arr">→</span></a>
+      <a href="/cdn-cgi/l/email-protection#b5d7c0c6dcdbd0c6c6f5d7d9d4d6deddc0d7d7d9d09bd6dad8" class="job-card"><div><div class="job-dept">Product</div><div class="job-title">Product Designer</div><div class="job-meta">Remote · Full-time</div></div><span class="job-arr">→</span></a>
+      <a href="/cdn-cgi/l/email-protection#50322523393e35232310323c31333b382532323c357e333f3d" class="job-card"><div><div class="job-dept">Growth</div><div class="job-title">Growth &amp; Marketing</div><div class="job-meta">Remote · Full-time</div></div><span class="job-arr">→</span></a>
     </div>
   </div>
 </section>
@@ -543,7 +772,7 @@ footer{background:var(--ink);padding:52px 5% 32px;}
         <p>AI-powered investment terminal for Indian retail investors. Test hypotheses. Deploy agents. Invest smarter.</p>
       </div>
       <div class="ft-col"><h4>Product</h4><a href="#modules">Stock Screener</a><a href="#modules">Portfolio</a><a href="#agents">AI Agents</a></div>
-      <div class="ft-col"><h4>Company</h4><a href="#team">Team</a><a href="#careers">Careers</a><a href="mailto:business@blackhubble.com">Contact</a></div>
+      <div class="ft-col"><h4>Company</h4><a href="#team">Team</a><a href="#careers">Careers</a><a href="/cdn-cgi/l/email-protection#80e2f5f3e9eee5f3f3c0e2ece1e3ebe8f5e2e2ece5aee3efed">Contact</a></div>
       <div class="ft-col"><h4>Legal</h4><a href="#">Privacy Policy</a><a href="#">Terms of Service</a><a href="#">Disclaimer</a></div>
     </div>
     <div class="ft-bot">
@@ -553,7 +782,7 @@ footer{background:var(--ink);padding:52px 5% 32px;}
   </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // Cursor
 const cur=document.getElementById('cur'),ring=document.getElementById('cur-r');
 let mx=0,my=0,rx=0,ry=0;
@@ -575,14 +804,33 @@ function cm(){document.getElementById('mobMenu').classList.remove('open');}
 const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in');});},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
 document.querySelectorAll('.fade').forEach(el=>obs.observe(el));
 
+
+const moduleData = {
+  screener: {status:'live',name:'Stock Screener',desc:'Filter 1,400+ NSE/BSE stocks using 50+ parameters. AI ranks results by relevance to your portfolio and investment style.',features:['PE · PB · ROE · ROCE · EPS growth','FII% · DII% · Promoter holding','52-week high/low · Volume surge','Sector filter · Market cap filter','AI portfolio fit score'],cta:true},
+  portfolio: {status:'live',name:'Portfolio',desc:'Unified P&L and allocation heatmap across all connected brokers. AI identifies concentration risk, overlaps and rebalancing opportunities.',features:['Multi-broker sync (Zerodha live)','Sector & stock concentration heatmap','P&L breakdown by holding period','Risk scoring 1-10','Tax-loss harvest windows'],cta:true},
+  hypothesis: {status:'soon',name:'Hypothesis Testing',desc:'Run compute-heavy backtests on real NSE/BSE data — no code needed. Natural language input, institutional-grade output.',features:['5-year NSE/BSE historical data','Fundamentals + price + macro + alt data','Win rate · Avg return · Matching events','Multi-dataset cross-correlation','Natural language query engine']},
+  agents: {status:'soon',name:'AI Agents',desc:'Autonomous agents that react to live market changes, persist memory across sessions, and chain multi-hop workflows.',features:['6 specialised agents','Real-time market event triggers','Memory persisted across sessions','Multi-hop logic chains','Custom condition builder']},
+  options: {status:'soon',name:'Options Screener',desc:'Full F&O intelligence — unusual OI buildup, PCR divergence, IV crush setups and max pain levels filtered to your positions.',features:['Unusual OI buildup detection','PCR tracking by strike','IV crush opportunity scanner','Max pain calculator','Position-filtered alerts']},
+  fundamentals: {status:'soon',name:'Fundamentals',desc:'10-year financial history, quarterly result analysis, promoter holding trends and FII/DII flow data.',features:['10-year P&L · Balance sheet · CF','Quarterly results with AI commentary','Promoter pledge & holding trend','FII/DII monthly flow data','Peer comparison engine']},
+  earnings: {status:'soon',name:'Earnings Calendar',desc:'AI-predicted price moves before results drop — based on historical earnings patterns for each specific stock.',features:['Pre-earnings move prediction','Historical earnings surprise data','Options IV vs historical IV','Post-result reaction patterns','Portfolio earnings impact summary']},
+  macro: {status:'soon',name:'Macro & RBI',desc:'Track RBI decisions, CPI, GST data and FII/DII flows — then see their direct impact on your portfolio sectors.',features:['RBI rate decision impact model','CPI & WPI trend tracker','FII/DII daily flow dashboard','GST collection as economic signal','Sector impact mapping engine']}
+};
+function setActiveModule(key) {
+  const d = moduleData[key];
+  if(!d) return;
+  const el = document.getElementById('modPreviewContent');
+  if(!el) return;
+  const isLive = d.status === 'live';
+  el.innerHTML = `
+    <div class="ms-pv-tag ${isLive ? 'live-label' : 'soon-label'}">${isLive ? '⚡ Live' : '🔮 Coming Soon'}</div>
+    <div class="ms-pv-name">${d.name}</div>
+    <div class="ms-pv-desc">${d.desc}</div>
+    <div class="ms-pv-features">${d.features.map(f=>`<div class="ms-pv-feat">${f}</div>`).join('')}</div>
+    ${d.cta ? '<a href="https://app.blackhubble.com/signup" class="ms-pv-cta">Try it free →</a>' : '<span style="font-size:12px;color:#ffffff33;">Coming in next 60 days</span>'}
+  `;
+  document.querySelectorAll('.ms-card').forEach(c=>c.classList.remove('active'));
+  event.currentTarget.classList.add('active');
+}
 // FAQ
 function doFaq(btn){
-  const a=btn.nextElementSibling,p=btn.querySelector('.faq-plus');
-  const open=a.style.display==='block';
-  document.querySelectorAll('.faq-a').forEach(x=>x.style.display='none');
-  document.querySelectorAll('.faq-plus').forEach(x=>{x.style.transform='none';x.style.borderColor='var(--border2)';});
-  if(!open){a.style.display='block';p.style.transform='rotate(45deg)';p.style.borderColor='var(--accent)';}
-}
-</script>
-</body>
-</html>
+  const a=btn.nextElementSibling,p=btn.querySe
