@@ -114,8 +114,8 @@ section{padding:112px 5%;}
 .d-mv{font-family:'Poppins',sans-serif;font-size:20px;font-weight:800;color:var(--ink);letter-spacing:-1px;}
 .d-ms{font-size:11px;margin-top:3px;}.up{color:var(--green);}.dn{color:var(--accent);}
 
-#agents{background:var(--teal);position:relative;overflow:hidden;}
-.ag-bg{position:absolute;inset:0;background-image:linear-gradient(#ffffff08 1px,transparent 1px),linear-gradient(90deg,#ffffff08 1px,transparent 1px);background-size:60px 60px;opacity:1;}
+#agents{background:var(--bg);position:relative;overflow:hidden;}
+.ag-bg{position:absolute;inset:0;background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px);background-size:64px 64px;opacity:.35;}
 .ag-glow{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:700px;height:400px;background:radial-gradient(ellipse,#E8540A08 0%,transparent 65%);}
 .ag-inner{max-width:1160px;margin:0 auto;position:relative;}
 .ag-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:56px;}
@@ -126,10 +126,10 @@ section{padding:112px 5%;}
 .ag-tag{display:inline-flex;align-items:center;gap:5px;font-size:10.5px;font-weight:700;color:#E8540A;letter-spacing:.5px;}.ag-tag::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--accent);}
 .ag-specs{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:12px;}
 .ag-spec{background:#ffffff10;border:1px solid #ffffff18;border-radius:4px;padding:2px 8px;font-size:10.5px;color:#ffffffAA;font-weight:600;}
-.ag-memory-bar{display:flex;align-items:center;gap:20px;background:#ffffff10;border:1px solid #ffffff1A;border-left:4px solid #E8540A;border-radius:14px;padding:20px 28px;margin-top:24px;}
+.ag-memory-bar{display:flex;align-items:center;gap:20px;background:var(--white);border:1px solid var(--border);border-left:4px solid #E8540A;border-radius:14px;padding:20px 28px;margin-top:24px;}
 .amb-icon{font-size:24px;flex-shrink:0;}
-.amb-text{font-size:14px;color:#ffffffAA;flex:1;line-height:1.6;}
-.amb-text strong{color:#fff;}
+.amb-text{font-size:14px;color:var(--ink3);flex:1;line-height:1.6;}
+.amb-text strong{color:var(--ink);}
 .amb-badge{background:var(--accent-bg);border:1px solid #E8540A22;border-radius:99px;padding:5px 14px;font-size:11.5px;font-weight:700;color:var(--accent);white-space:nowrap;}
 
 #human{background:linear-gradient(180deg,var(--bg2) 0%,var(--teal-bg) 100%);}
@@ -348,6 +348,37 @@ section{padding:112px 5%;}
 
 .h-blob1{position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,#E8540A08 0%,transparent 70%);top:-100px;right:5%;pointer-events:none;}
 .h-blob2{position:absolute;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,#0D5C5808 0%,transparent 70%);bottom:0;left:10%;pointer-events:none;}
+
+/* ── AGENT BENTO ── */
+.ag-bento{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:auto auto;gap:16px;margin-top:52px;}
+.agb-card{border-radius:20px;padding:28px;position:relative;overflow:hidden;transition:transform .25s,box-shadow .25s;cursor:default;}
+.agb-card:hover{transform:translateY(-5px);box-shadow:0 20px 60px rgba(0,0,0,.1);}
+.agb-large{grid-column:span 1;}
+
+/* Each card unique color */
+.agb-orange{background:linear-gradient(135deg,#FFF4EE 0%,#FFE4D0 100%);border:1.5px solid #E8540A22;}
+.agb-teal{background:linear-gradient(135deg,#E6F4F3 0%,#CCEDEA 100%);border:1.5px solid #0D5C5822;}
+.agb-violet{background:linear-gradient(135deg,#F3F0FF 0%,#E5DEFF 100%);border:1.5px solid #7C3AED22;}
+.agb-rose{background:linear-gradient(135deg,#FFF0F5 0%,#FFD6E7 100%);border:1.5px solid #E11D4822;}
+.agb-amber{background:linear-gradient(135deg,#FFFBEB 0%,#FEF3C7 100%);border:1.5px solid #D9770622;}
+.agb-green{background:linear-gradient(135deg,#ECFDF5 0%,#D1FAE5 100%);border:1.5px solid #05966922;}
+
+.agb-num{position:absolute;top:20px;right:24px;font-family:'Poppins',sans-serif;font-size:44px;font-weight:900;opacity:.08;color:var(--ink);line-height:1;}
+.agb-icon-wrap{width:48px;height:48px;border-radius:12px;background:#fff;box-shadow:0 4px 16px rgba(0,0,0,.08);display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:16px;}
+.agb-name{font-family:'Poppins',sans-serif;font-size:16px;font-weight:800;color:var(--ink);margin-bottom:10px;letter-spacing:-.4px;}
+.agb-desc{font-size:13px;color:var(--ink3);line-height:1.7;margin-bottom:14px;}
+.agb-specs{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;}
+.agb-specs span{background:#fff;border-radius:5px;padding:3px 10px;font-size:11px;font-weight:600;color:var(--ink2);box-shadow:0 1px 4px rgba(0,0,0,.06);}
+.agb-tag{font-size:12px;font-weight:700;color:var(--ink3);}
+.agb-orange .agb-tag{color:#C2410C;}
+.agb-teal .agb-tag{color:#0D5C58;}
+.agb-violet .agb-tag{color:#6D28D9;}
+.agb-rose .agb-tag{color:#BE185D;}
+.agb-amber .agb-tag{color:#B45309;}
+.agb-green .agb-tag{color:#047857;}
+
+@media(max-width:960px){.ag-bento{grid-template-columns:1fr 1fr;}.agb-large{grid-column:span 2;}}
+@media(max-width:600px){.ag-bento{grid-template-columns:1fr;}.agb-large{grid-column:span 1;}}
 </style>
 </head>
 <body>
@@ -562,75 +593,75 @@ section{padding:112px 5%;}
 <section id="agents">
   <div class="ag-bg"></div><div class="ag-glow"></div>
   <div class="ag-inner">
-    <p class="eyebrow fade" style="color:#E8540A;">AI Agents</p>
-    <h2 class="s-h fade" style="color:#fff;">Not alerts. <span style="color:#E8540A;font-style:italic;">Intelligent agents.</span></h2>
-    <p class="s-sub fade" style="color:#ffffffAA;">Autonomous agents that react to live market changes, run backtests across fundamentals, prices, macro and alternative data — persist memory across sessions — and always know your portfolio.</p>
-    <div class="ag-grid">
-      <div class="ag-card fade">
-        <div class="ag-icon">🔭</div>
-        <div class="ag-name">Hypothesis Agent</div>
-        <div class="ag-desc">Run compute-heavy backtests across NSE/BSE fundamentals, prices, macro and alternative data. Natural language input — no code needed.</div>
-        <div class="ag-specs">
-          <span class="ag-spec">NSE/BSE 5-yr data</span>
-          <span class="ag-spec">Multi-dataset</span>
-          <span class="ag-spec">Win rate + returns</span>
+    <p class="eyebrow fade">AI Agents</p>
+    <h2 class="s-h fade">Not alerts. <span style="color:#E8540A;font-style:italic;">Intelligent agents.</span></h2>
+    <p class="s-sub fade">Autonomous agents that react to live market changes, run backtests across fundamentals, prices, macro and alternative data — persist memory across sessions — and always know your portfolio.</p>
+    <div class="ag-bento">
+      <!-- Hypothesis — large card left -->
+      <div class="agb-card agb-large agb-orange fade">
+        <div class="agb-num">01</div>
+        <div class="agb-icon-wrap"><span>🔭</span></div>
+        <div class="agb-name">Hypothesis Agent</div>
+        <div class="agb-desc">Type any market idea in plain English. Agents backtest it across 5 years of NSE/BSE data — fundamentals, price, macro — and return win rate, avg return and matching events.</div>
+        <div class="agb-specs">
+          <span>NSE/BSE 5-yr data</span><span>Multi-dataset</span><span>Win rate + returns</span>
         </div>
-        <div class="ag-tag">Backtesting engine</div>
+        <div class="agb-tag">Backtesting engine →</div>
       </div>
-      <div class="ag-card fade fd1">
-        <div class="ag-icon">👁️</div>
-        <div class="ag-name">Watchlist Agent</div>
-        <div class="ag-desc">Spin up agents that react to live market conditions — FII flows above threshold, PCR divergence, sector rotation signals. Fires when criteria match.</div>
-        <div class="ag-specs">
-          <span class="ag-spec">Real-time triggers</span>
-          <span class="ag-spec">FII/DII data</span>
-          <span class="ag-spec">Custom conditions</span>
+      <!-- Watchlist — top right -->
+      <div class="agb-card agb-teal fade fd1">
+        <div class="agb-num">02</div>
+        <div class="agb-icon-wrap"><span>👁️</span></div>
+        <div class="agb-name">Watchlist Agent</div>
+        <div class="agb-desc">Set conditions. Agent fires when FII flows spike, PCR diverges or sector rotation triggers your criteria.</div>
+        <div class="agb-specs">
+          <span>Real-time triggers</span><span>FII/DII data</span>
         </div>
-        <div class="ag-tag">Event-driven triggers</div>
+        <div class="agb-tag">Event-driven →</div>
       </div>
-      <div class="ag-card fade fd2">
-        <div class="ag-icon">📊</div>
-        <div class="ag-name">Portfolio Agent</div>
-        <div class="ag-desc">Monitors your holdings across all brokers — concentration risk, sector overlap, tax-loss harvesting windows, and rebalancing signals.</div>
-        <div class="ag-specs">
-          <span class="ag-spec">Multi-broker</span>
-          <span class="ag-spec">Risk scoring</span>
-          <span class="ag-spec">Tax optimization</span>
+      <!-- Portfolio — middle right -->
+      <div class="agb-card agb-violet fade fd2">
+        <div class="agb-num">03</div>
+        <div class="agb-icon-wrap"><span>📊</span></div>
+        <div class="agb-name">Portfolio Agent</div>
+        <div class="agb-desc">Always-on watch across all brokers — concentration risk, tax-loss windows, rebalancing signals.</div>
+        <div class="agb-specs">
+          <span>Multi-broker</span><span>Risk scoring</span>
         </div>
-        <div class="ag-tag">Always-on watch</div>
+        <div class="agb-tag">Always-on →</div>
       </div>
-      <div class="ag-card fade">
-        <div class="ag-icon">📰</div>
-        <div class="ag-name">News Agent</div>
-        <div class="ag-desc">Filters every news item — earnings, corporate actions, regulatory changes — against your actual holdings. Zero noise.</div>
-        <div class="ag-specs">
-          <span class="ag-spec">Portfolio-filtered</span>
-          <span class="ag-spec">Earnings impact</span>
-          <span class="ag-spec">Corp actions</span>
+      <!-- News — bottom left -->
+      <div class="agb-card agb-rose fade">
+        <div class="agb-num">04</div>
+        <div class="agb-icon-wrap"><span>📰</span></div>
+        <div class="agb-name">News Agent</div>
+        <div class="agb-desc">Filters every earnings release, corporate action and regulatory change — against your actual holdings. Zero noise, only what matters to you.</div>
+        <div class="agb-specs">
+          <span>Portfolio-filtered</span><span>Earnings impact</span><span>Corp actions</span>
         </div>
-        <div class="ag-tag">Portfolio-filtered signals</div>
+        <div class="agb-tag">Signal filtering →</div>
       </div>
-      <div class="ag-card fade fd1">
-        <div class="ag-icon">🌐</div>
-        <div class="ag-name">Macro Agent</div>
-        <div class="ag-desc">Tracks RBI rate decisions, CPI, FII/DII flows, GST data. Chains multi-hop logic — FII outflows spike + earnings miss → affected sectors → your holdings impact.</div>
-        <div class="ag-specs">
-          <span class="ag-spec">RBI + CPI data</span>
-          <span class="ag-spec">Multi-hop logic</span>
-          <span class="ag-spec">Sector mapping</span>
+      <!-- Macro — bottom middle -->
+      <div class="agb-card agb-amber fade fd1">
+        <div class="agb-num">05</div>
+        <div class="agb-icon-wrap"><span>🌐</span></div>
+        <div class="agb-name">Macro Agent</div>
+        <div class="agb-desc">RBI + CPI + FII/DII + GST. Multi-hop logic chains: outflow spike → earnings miss → sector impact → your holdings. Automatically.</div>
+        <div class="agb-specs">
+          <span>Multi-hop logic</span><span>Sector mapping</span>
         </div>
-        <div class="ag-tag">Multi-hop workflows</div>
+        <div class="agb-tag">Chain workflows →</div>
       </div>
-      <div class="ag-card fade fd2">
-        <div class="ag-icon">⚡</div>
-        <div class="ag-name">Options Agent</div>
-        <div class="ag-desc">Scans F&amp;O chains for unusual OI buildup, PCR divergence, IV crush setups and max pain levels — filtered to your existing positions.</div>
-        <div class="ag-specs">
-          <span class="ag-spec">OI analysis</span>
-          <span class="ag-spec">PCR tracking</span>
-          <span class="ag-spec">IV crush alerts</span>
+      <!-- Options — large card right bottom -->
+      <div class="agb-card agb-large agb-green fade fd2">
+        <div class="agb-num">06</div>
+        <div class="agb-icon-wrap"><span>⚡</span></div>
+        <div class="agb-name">Options Agent</div>
+        <div class="agb-desc">Full F&amp;O intelligence — unusual OI buildup, PCR divergence, IV crush setups and max pain levels. Every signal filtered to your current positions so you only see what's relevant.</div>
+        <div class="agb-specs">
+          <span>OI analysis</span><span>PCR tracking</span><span>IV crush alerts</span>
         </div>
-        <div class="ag-tag">F&amp;O intelligence</div>
+        <div class="agb-tag">F&amp;O intelligence →</div>
       </div>
     </div>
     <div class="ag-memory-bar fade">
@@ -887,7 +918,7 @@ section{padding:112px 5%;}
         <a href="#" class="nl"><img src="./logo.png" alt="BlackHubble" onerror="this.style.display='none'" style="height:28px;"/><span class="nl-t">BlackHubble</span></a>
         <p class="flt-tagline">The AI terminal built for India's retail investors. Test hypotheses. Deploy agents. Decide with confidence.</p>
         <div class="flt-socials">
-          <a href="mailto:business@blackhubble.com" class="flt-social">✉ business@blackhubble.com</a>
+          <a href="/cdn-cgi/l/email-protection#c2a0b7b1abaca7b1b182a0aea3a1a9aab7a0a0aea7eca1adaf" class="flt-social">✉ <span class="__cf_email__" data-cfemail="f59780869c9b908686b5979994969e9d8097979990db969a98">[email&#160;protected]</span></a>
         </div>
       </div>
       <!-- Nav links -->
@@ -904,7 +935,7 @@ section{padding:112px 5%;}
           <div class="flt-nav-h">Company</div>
           <a href="#team">Team</a>
           <a href="#careers">Careers</a>
-          <a href="mailto:business@blackhubble.com">Contact</a>
+          <a href="/cdn-cgi/l/email-protection#f69483859f98938585b6949a97959d9e8394949a93d895999b">Contact</a>
         </div>
         <div class="flt-nav-col">
           <div class="flt-nav-h">Legal</div>
@@ -944,7 +975,7 @@ section{padding:112px 5%;}
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // Cursor
 const cur=document.getElementById('cur'),ring=document.getElementById('cur-r');
 let mx=0,my=0,rx=0,ry=0;
