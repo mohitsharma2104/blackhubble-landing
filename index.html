@@ -7,11 +7,11 @@
 <meta name="description" content="Reimagine how you interact with markets. Test any market hypothesis on NSE/BSE with intelligent agents. It's not just data access — it's agent-driven insight and action."/>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 <style>
-:root{--bg:#F8F6F1;--bg2:#F2EFE8;--bg3:#EAE6DC;--white:#FFFFFF;--ink:#18160F;--ink2:#2E2B22;--ink3:#6B6759;--ink4:#A8A49A;--border:#E0DDD5;--border2:#D0CCC0;--accent:#2DD4A0;--accent2:#1FAF83;--accent-bg:#EAFAF5;--green:#1E7A4A;--green-bg:#E8F5EE;}
+:root{--bg:#F8F6F1;--bg2:#F2EFE8;--bg3:#EAE6DC;--white:#FFFFFF;--ink:#18160F;--ink2:#2E2B22;--ink3:#6B6759;--ink4:#A8A49A;--border:#E0DDD5;--border2:#D0CCC0;--accent:#4F46E5;--accent2:#3730A3;--accent-bg:#EEF2FF;--green:#1E7A4A;--green-bg:#E8F5EE;}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
 body{font-family:'Nunito',system-ui,sans-serif;background:var(--bg);color:var(--ink);overflow-x:hidden;line-height:1.6;}
-::selection{background:#2DD4A022;}
+::selection{background:#4F46E522;}
 ::-webkit-scrollbar{width:2px;}::-webkit-scrollbar-thumb{background:var(--border2);}
 
 #cur{width:10px;height:10px;background:var(--accent);border-radius:50%;position:fixed;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width .15s,height .15s;mix-blend-mode:multiply;}
@@ -25,15 +25,15 @@ nav.up{background:rgba(248,246,241,.94);backdrop-filter:blur(20px);border-bottom
 .nv{display:flex;gap:32px;}.nv a{color:var(--ink3);font-size:13.5px;font-weight:500;text-decoration:none;transition:color .2s;}.nv a:hover{color:var(--ink);}
 .nr{display:flex;gap:10px;align-items:center;}
 .btn-ghost{color:var(--ink2);font-size:13.5px;font-weight:600;text-decoration:none;padding:8px 18px;border-radius:7px;border:1px solid var(--border2);transition:all .2s;background:transparent;}.btn-ghost:hover{border-color:var(--ink3);background:var(--bg2);}
-.btn-dark{background:var(--ink);color:#fff;font-size:13.5px;font-weight:600;text-decoration:none;padding:9px 22px;border-radius:7px;border:none;cursor:pointer;font-family:inherit;transition:all .2s;display:inline-block;}.btn-dark:hover{background:var(--accent);color:var(--ink);transform:translateY(-1px);}
+.btn-dark{background:var(--ink);color:#fff;font-size:13.5px;font-weight:600;text-decoration:none;padding:9px 22px;border-radius:7px;border:none;cursor:pointer;font-family:inherit;transition:all .2s;display:inline-block;}.btn-dark:hover{background:var(--accent);color:#fff;transform:translateY(-1px);}
 .hb{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;}.hb span{display:block;width:22px;height:1.5px;background:var(--ink);border-radius:2px;}
 .mm{display:none;position:fixed;top:66px;left:0;right:0;background:var(--bg);border-bottom:1px solid var(--border);padding:20px 5%;flex-direction:column;z-index:199;}.mm.open{display:flex;}.mm a{color:var(--ink2);font-size:15px;font-weight:500;text-decoration:none;padding:13px 0;border-bottom:1px solid var(--border);}
 
 #hero{min-height:100vh;padding:130px 5% 80px;display:flex;align-items:center;position:relative;overflow:hidden;}
 .h-grid{position:absolute;inset:0;background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px);background-size:72px 72px;opacity:.5;pointer-events:none;}
-.h-glow{position:absolute;top:20%;right:-5%;width:600px;height:600px;background:radial-gradient(circle,#2DD4A00D 0%,transparent 65%);pointer-events:none;}
+.h-glow{position:absolute;top:20%;right:-5%;width:600px;height:600px;background:radial-gradient(circle,#4F46E50D 0%,transparent 65%);pointer-events:none;}
 .h-inner{max-width:1160px;margin:0 auto;width:100%;display:grid;grid-template-columns:1fr 460px;gap:72px;align-items:center;position:relative;}
-.h-pill{display:inline-flex;align-items:center;gap:8px;background:var(--accent-bg);border:1px solid #2DD4A022;border-radius:99px;padding:6px 14px;font-size:12px;font-weight:700;color:var(--accent);letter-spacing:.3px;margin-bottom:28px;}
+.h-pill{display:inline-flex;align-items:center;gap:8px;background:var(--accent-bg);border:1px solid #4F46E522;border-radius:99px;padding:6px 14px;font-size:12px;font-weight:700;color:var(--accent);letter-spacing:.3px;margin-bottom:28px;}
 .h-dot{width:6px;height:6px;border-radius:50%;background:var(--green);animation:pulse 2s infinite;}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.7)}}
 .h-h{font-family:'Poppins',sans-serif;font-size:clamp(38px,5vw,68px);font-weight:800;line-height:1.05;letter-spacing:-2.5px;color:var(--ink);margin-bottom:24px;}
@@ -42,10 +42,10 @@ nav.up{background:rgba(248,246,241,.94);backdrop-filter:blur(20px);border-bottom
 .h-sub{font-size:clamp(15px,1.6vw,17px);color:var(--ink3);line-height:1.85;max-width:500px;margin-bottom:40px;}
 .h-sub strong{color:var(--ink);font-weight:700;}
 .h-acts{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:48px;}
-.btn-acc{background:var(--accent);color:var(--ink);font-size:15px;font-weight:700;padding:14px 34px;border-radius:9px;text-decoration:none;border:none;cursor:pointer;font-family:inherit;transition:all .25s;display:inline-block;}.btn-acc:hover{background:var(--accent2);transform:translateY(-2px);box-shadow:0 12px 36px #2DD4A02A;}
+.btn-acc{background:var(--accent);color:#fff;font-size:15px;font-weight:700;padding:14px 34px;border-radius:9px;text-decoration:none;border:none;cursor:pointer;font-family:inherit;transition:all .25s;display:inline-block;}.btn-acc:hover{background:var(--accent2);transform:translateY(-2px);box-shadow:0 12px 36px #4F46E52A;}
 .btn-ol{background:transparent;color:var(--ink2);font-size:15px;font-weight:600;padding:13px 28px;border-radius:9px;text-decoration:none;border:1.5px solid var(--border2);transition:all .2s;display:inline-block;}.btn-ol:hover{border-color:var(--ink3);background:var(--bg2);}
 .h-soc{display:flex;align-items:center;gap:14px;font-size:12.5px;color:var(--ink4);}
-.avs{display:flex;}.av{width:28px;height:28px;border-radius:50%;border:2px solid var(--bg);background:linear-gradient(135deg,var(--accent),#4AECC4);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;color:#fff;margin-left:-7px;font-family:'Poppins',sans-serif;}.av:first-child{margin-left:0;}
+.avs{display:flex;}.av{width:28px;height:28px;border-radius:50%;border:2px solid var(--bg);background:linear-gradient(135deg,var(--accent),#818CF8);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;color:#fff;margin-left:-7px;font-family:'Poppins',sans-serif;}.av:first-child{margin-left:0;}
 
 .term{background:var(--white);border-radius:18px;box-shadow:0 32px 80px #18160F16,0 2px 8px #18160F08;overflow:hidden;border:1px solid var(--border);position:relative;}
 .t-bar{background:var(--bg2);padding:13px 18px;display:flex;align-items:center;gap:10px;border-bottom:1px solid var(--border);}
@@ -58,16 +58,16 @@ nav.up{background:rgba(248,246,241,.94);backdrop-filter:blur(20px);border-bottom
 .t-av.b{background:var(--accent);color:#fff;}.t-av.u{background:#2a2720;color:#C8C4BA;}
 .t-bub{padding:10px 14px;border-radius:11px;font-size:12px;line-height:1.65;max-width:82%;}
 .t-bub.b{background:var(--white);border:1px solid var(--border);color:var(--ink2);border-radius:4px 11px 11px 11px;}
-.t-bub.u{background:var(--accent);color:var(--ink);border-radius:11px 4px 11px 11px;}
+.t-bub.u{background:var(--accent);color:#fff;border-radius:11px 4px 11px 11px;}
 .t-hi{color:var(--accent);font-weight:700;}.t-hi2{color:var(--green);font-weight:700;}
-.t-agent{background:#edfaf3;border:1px solid #b6e8d0;border-radius:8px;padding:10px 13px;margin-top:6px;}
+.t-agent{background:#EEF2FF;border:1px solid #C7D2FE;border-radius:8px;padding:10px 13px;margin-top:6px;}
 .t-al{font-size:10px;font-weight:700;color:var(--green);letter-spacing:1px;text-transform:uppercase;margin-bottom:6px;}
 .t-ar{display:flex;align-items:center;gap:8px;font-size:11.5px;color:var(--green);margin-bottom:3px;}.t-ar:last-child{margin-bottom:0;}
 .t-inp{display:flex;gap:8px;padding:0 18px 18px;background:var(--bg);}.t-inp input{flex:1;background:var(--white);border:1px solid var(--border);border-radius:8px;padding:9px 13px;color:var(--ink3);font-size:12px;outline:none;font-family:inherit;}
 .t-send{background:var(--accent);border:none;border-radius:8px;padding:0 14px;color:#fff;cursor:pointer;font-size:14px;}
-.fc{position:absolute;background:var(--white);border:1px solid var(--border);border-radius:12px;padding:12px 16px;box-shadow:0 8px 28px #18160F12;font-size:12px;white-space:nowrap;animation:float 4s ease-in-out infinite;}
+.fc{position:absolute;background:var(--white);border:1px solid var(--border);border-radius:12px;padding:12px 16px;box-shadow:0 12px 40px #18160F18;font-size:12px;white-space:nowrap;animation:float 4s ease-in-out infinite;z-index:10;}
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
-.fc1{bottom:-18px;left:-24px;animation-delay:0s;}.fc2{top:14px;right:-16px;animation-delay:1.8s;}
+.fc1{bottom:-10px;left:-16px;animation-delay:0s;}.fc2{top:8px;right:-8px;animation-delay:1.8s;}
 .f-label{font-size:10px;font-weight:700;color:var(--ink4);letter-spacing:1px;text-transform:uppercase;margin-bottom:4px;}
 .f-val{font-family:'Poppins',sans-serif;font-weight:700;font-size:14px;color:var(--ink);}
 
@@ -116,7 +116,7 @@ section{padding:112px 5%;}
 
 #agents{background:var(--bg2);position:relative;overflow:hidden;}
 .ag-bg{position:absolute;inset:0;background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px);background-size:60px 60px;opacity:.4;}
-.ag-glow{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:700px;height:400px;background:radial-gradient(ellipse,#2DD4A008 0%,transparent 65%);}
+.ag-glow{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:700px;height:400px;background:radial-gradient(ellipse,#4F46E508 0%,transparent 65%);}
 .ag-inner{max-width:1160px;margin:0 auto;position:relative;}
 .ag-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:56px;}
 .ag-card{background:var(--white);border:1px solid var(--border);border-radius:16px;padding:26px 22px;transition:all .25s;}.ag-card:hover{background:var(--white);border-color:var(--accent);transform:translateY(-4px);box-shadow:0 12px 36px #18160F0C;}
@@ -130,13 +130,13 @@ section{padding:112px 5%;}
 .amb-icon{font-size:24px;flex-shrink:0;}
 .amb-text{font-size:14px;color:var(--ink3);flex:1;line-height:1.6;}
 .amb-text strong{color:var(--ink);}
-.amb-badge{background:var(--accent-bg);border:1px solid #2DD4A022;border-radius:99px;padding:5px 14px;font-size:11.5px;font-weight:700;color:var(--accent);white-space:nowrap;}
+.amb-badge{background:var(--accent-bg);border:1px solid #4F46E522;border-radius:99px;padding:5px 14px;font-size:11.5px;font-weight:700;color:var(--accent);white-space:nowrap;}
 
 #human{background:var(--bg2);}
 .human-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;margin-top:64px;}
 .old-new{display:flex;flex-direction:column;gap:16px;}
 .old-box{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:26px;}
-.new-box{background:linear-gradient(135deg,#152A23 0%,#1FAF83 100%);border-radius:14px;padding:26px;position:relative;overflow:hidden;}.new-box::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent),#4AECC4);}
+.new-box{background:linear-gradient(135deg,#152A23 0%,#3730A3 100%);border-radius:14px;padding:26px;position:relative;overflow:hidden;}.new-box::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent),#818CF8);}
 .box-label{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:10px;}
 .old-box .box-label{color:var(--accent);}.new-box .box-label{color:var(--accent);}
 .box-h{font-family:'Poppins',sans-serif;font-size:16px;font-weight:700;letter-spacing:-.3px;margin-bottom:10px;}
@@ -145,7 +145,7 @@ section{padding:112px 5%;}
 .old-box .box-p{color:var(--ink3);}.new-box .box-p{color:#ffffff55;}
 .human-list{display:flex;flex-direction:column;}
 .h-feat{display:flex;gap:16px;align-items:flex-start;padding:20px 0;border-bottom:1px solid var(--border);}.h-feat:last-child{border-bottom:none;}
-.h-feat-icon{width:44px;height:44px;border-radius:50%;background:var(--accent-bg);border:1px solid #2DD4A018;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;}
+.h-feat-icon{width:44px;height:44px;border-radius:50%;background:var(--accent-bg);border:1px solid #4F46E518;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;}
 .h-feat h3{font-family:'Poppins',sans-serif;font-size:15px;font-weight:700;color:var(--ink);margin-bottom:6px;}
 .h-feat p{font-size:13px;color:var(--ink3);line-height:1.7;}
 
@@ -172,7 +172,7 @@ section{padding:112px 5%;}
 #team{background:var(--bg2);}
 .team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:56px;}
 .team-card{background:var(--white);border:1px solid var(--border);border-radius:20px;padding:36px 28px;text-align:center;transition:all .3s;position:relative;overflow:hidden;}
-.team-card::after{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent),#4AECC4);}
+.team-card::after{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent),#818CF8);}
 .team-card:hover{transform:translateY(-5px);box-shadow:0 20px 56px #18160F10;}
 .t-init{width:76px;height:76px;border-radius:50%;background:var(--ink);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;font-family:'Poppins',sans-serif;font-size:28px;font-weight:800;color:var(--bg);}
 .t-name{font-family:'Poppins',sans-serif;font-size:18px;font-weight:700;color:var(--ink);margin-bottom:4px;letter-spacing:-.4px;}
@@ -180,16 +180,16 @@ section{padding:112px 5%;}
 .t-bio{font-size:13px;color:var(--ink3);line-height:1.75;}
 .t-loc{display:inline-flex;align-items:center;gap:5px;background:var(--bg);border:1px solid var(--border);border-radius:99px;padding:4px 12px;font-size:11px;color:var(--ink4);margin-top:14px;}
 
-#cta-section{background:linear-gradient(160deg,#0F1A15 0%,#0A3D2E 100%);padding:112px 5%;position:relative;overflow:hidden;}
+#cta-section{background:linear-gradient(160deg,#0F1A15 0%,#312e81 100%);padding:112px 5%;position:relative;overflow:hidden;}
 .cta-grid-bg{position:absolute;inset:0;background-image:linear-gradient(#ffffff04 1px,transparent 1px),linear-gradient(90deg,#ffffff04 1px,transparent 1px);background-size:60px 60px;}
-.cta-glow{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:400px;background:radial-gradient(ellipse,#2DD4A01A 0%,transparent 65%);}
+.cta-glow{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:400px;background:radial-gradient(ellipse,#4F46E51A 0%,transparent 65%);}
 .cta-inner{max-width:680px;margin:0 auto;text-align:center;position:relative;}
 .cta-badge{display:inline-flex;align-items:center;gap:7px;background:#ffffff0D;border:1px solid #ffffff15;border-radius:99px;padding:6px 16px;font-size:12px;color:#ffffff55;margin-bottom:28px;}
 .cta-h{font-family:'Poppins',sans-serif;font-size:clamp(34px,5vw,60px);font-weight:800;color:#fff;letter-spacing:-2px;line-height:1.08;margin-bottom:18px;}
 .cta-h em{font-style:italic;color:var(--accent);}
 .cta-sub{font-size:17px;color:#ffffff44;line-height:1.75;margin-bottom:44px;}
 .cta-acts{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
-.btn-white{background:var(--ink);color:#fff;font-size:15px;font-weight:700;padding:14px 36px;border-radius:9px;text-decoration:none;transition:all .25s;display:inline-block;}.btn-white:hover{background:var(--accent);color:var(--ink);transform:translateY(-2px);}
+.btn-white{background:var(--ink);color:#fff;font-size:15px;font-weight:700;padding:14px 36px;border-radius:9px;text-decoration:none;transition:all .25s;display:inline-block;}.btn-white:hover{background:var(--accent);color:#fff;transform:translateY(-2px);}
 .btn-ow{background:transparent;color:#fff;font-size:15px;font-weight:600;padding:13px 28px;border-radius:9px;text-decoration:none;border:1.5px solid #ffffff1A;transition:all .2s;display:inline-block;}.btn-ow:hover{border-color:#ffffff44;background:#ffffff09;}
 
 #faq{background:var(--bg);}
@@ -200,7 +200,7 @@ section{padding:112px 5%;}
 .faq-a{padding-bottom:20px;color:var(--ink3);font-size:14px;line-height:1.8;display:none;}
 
 #careers{background:var(--bg2);}
-.careers-box{background:linear-gradient(135deg,var(--ink2) 0%,#0A3D2E 100%);border-radius:22px;padding:60px;display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center;margin-bottom:40px;border:1px solid #1FAF8366;}
+.careers-box{background:linear-gradient(135deg,var(--ink2) 0%,#312e81 100%);border-radius:22px;padding:60px;display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center;margin-bottom:40px;border:1px solid #3730A366;}
 .car-left h2{font-family:'Poppins',sans-serif;font-size:clamp(24px,3vw,42px);font-weight:800;color:#fff;letter-spacing:-1.5px;line-height:1.15;margin-bottom:14px;}
 .car-left p{color:#ffffff44;font-size:15px;line-height:1.75;margin-bottom:28px;}
 .car-vals{display:flex;flex-direction:column;gap:14px;}
@@ -212,14 +212,7 @@ section{padding:112px 5%;}
 .job-title{font-family:'Poppins',sans-serif;font-size:15px;font-weight:700;color:var(--ink);margin-bottom:4px;}
 .job-meta{font-size:12.5px;color:var(--ink3);}.job-arr{color:var(--accent);font-size:20px;}
 
-footer{background:var(--ink2);padding:52px 5% 32px;}
-.ft{max-width:1160px;margin:0 auto;}
-.ft-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:48px;margin-bottom:52px;}
-.ft-brand p{font-size:13px;color:#ffffff33;line-height:1.75;margin-top:14px;max-width:240px;}
-.ft-col h4{font-size:11px;font-weight:700;color:#ffffff28;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:16px;}
-.ft-col a{display:block;color:#ffffff44;font-size:13px;text-decoration:none;margin-bottom:10px;transition:color .2s;}.ft-col a:hover{color:#fff;}
-.ft-bot{border-top:1px solid #ffffff09;padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
-.ft-copy{color:#ffffff22;font-size:12px;}.ft-dis{color:#ffffff18;font-size:11.5px;}
+
 
 .fade{opacity:0;transform:translateY(20px);transition:opacity .65s ease,transform .65s ease;}.fade.in{opacity:1;transform:none;}
 .fd1{transition-delay:.1s;}.fd2{transition-delay:.2s;}.fd3{transition-delay:.3s;}
@@ -250,15 +243,15 @@ footer{background:var(--ink2);padding:52px 5% 32px;}
 .bhtd-title{flex:1;text-align:center;font-size:11px;color:var(--ink4);font-family:'Poppins',sans-serif;letter-spacing:.3px;}
 .bhtd-status{display:flex;align-items:center;gap:5px;font-size:11px;color:var(--green);font-weight:700;}
 .bhtd-dot{width:5px;height:5px;border-radius:50%;background:var(--green);animation:pulse 2s infinite;}
-.bhtd-ctx{background:var(--green-bg);border-bottom:1px solid #b6e8d0;padding:10px 16px;display:flex;align-items:center;gap:12px;}
+.bhtd-ctx{background:var(--green-bg);border-bottom:1px solid #C7D2FE;padding:10px 16px;display:flex;align-items:center;gap:12px;}
 .bhtd-ctx-label{font-size:10.5px;font-weight:700;color:var(--green);letter-spacing:.5px;text-transform:uppercase;white-space:nowrap;}
-.bhtd-ctx-tags{display:flex;gap:6px;flex-wrap:wrap;}.bhtd-ctx-tags span{background:#fff;border:1px solid #b6e8d0;border-radius:4px;padding:2px 8px;font-size:11px;color:var(--ink2);font-weight:600;}
+.bhtd-ctx-tags{display:flex;gap:6px;flex-wrap:wrap;}.bhtd-ctx-tags span{background:#fff;border:1px solid #C7D2FE;border-radius:4px;padding:2px 8px;font-size:11px;color:var(--ink2);font-weight:600;}
 .bhtd-chat{padding:16px 16px 8px;display:flex;flex-direction:column;gap:12px;background:var(--bg);}
 .bhtd-msg{display:flex;gap:8px;align-items:flex-start;}.bhtd-msg.user{flex-direction:row-reverse;}
 .bhtd-av{width:24px;height:24px;border-radius:50%;background:var(--ink);color:var(--bg);display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:800;font-family:'Poppins',sans-serif;flex-shrink:0;}
 .bhtd-av.bot{background:var(--accent);}
 .bhtd-bub{padding:10px 13px;border-radius:10px;font-size:12.5px;line-height:1.6;max-width:88%;}
-.bhtd-bub.user{background:var(--accent);color:var(--ink);border-radius:10px 3px 10px 10px;}
+.bhtd-bub.user{background:var(--accent);color:#fff;border-radius:10px 3px 10px 10px;}
 .bhtd-bub.bot{background:var(--white);border:1px solid var(--border);color:var(--ink2);border-radius:3px 10px 10px 10px;}
 .bhtd-thinking{display:flex;align-items:center;gap:8px;padding:4px 32px;}
 .bhtd-think-dot{width:6px;height:6px;border-radius:50%;background:var(--accent);animation:pulse 1s infinite;flex-shrink:0;}
@@ -288,9 +281,58 @@ footer{background:var(--ink2);padding:52px 5% 32px;}
 .ms-pv-desc{font-size:14px;color:var(--ink3);line-height:1.7;margin-bottom:20px;}
 .ms-pv-features{display:flex;flex-direction:column;gap:8px;margin-bottom:24px;}
 .ms-pv-feat{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--ink3);}.ms-pv-feat::before{content:'→';color:var(--accent);font-weight:700;}
-.ms-pv-cta{display:inline-block;background:var(--accent);color:var(--ink);font-size:13.5px;font-weight:700;padding:10px 24px;border-radius:8px;text-decoration:none;transition:all .2s;}.ms-pv-cta:hover{background:var(--accent2);}
+.ms-pv-cta{display:inline-block;background:var(--accent);color:#fff;font-size:13.5px;font-weight:700;padding:10px 24px;border-radius:8px;text-decoration:none;transition:all .2s;}.ms-pv-cta:hover{background:var(--accent2);}
 .ms-live-col,.ms-soon-col{display:flex;flex-direction:column;}
 @media(max-width:960px){.mod-showcase{grid-template-columns:1fr;}.ms-preview{position:static;}}
+
+.broker-bar{padding:32px 5%;background:var(--white);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.broker-inner{max-width:1160px;margin:0 auto;}
+.broker-label{font-family:'Poppins',sans-serif;font-size:13px;font-weight:700;color:var(--ink);margin-bottom:16px;text-align:center;letter-spacing:-.2px;}
+.broker-grid{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:12px;}
+.broker-chip{display:flex;align-items:center;gap:10px;background:var(--bg);border:1.5px solid var(--border);border-radius:10px;padding:10px 16px;transition:all .2s;}
+.broker-chip.active{border-color:var(--accent);background:var(--accent-bg);}
+.broker-chip.broker-nse{border-style:dashed;}
+.broker-dot{width:7px;height:7px;border-radius:50%;background:var(--green);animation:pulse 2s infinite;flex-shrink:0;}
+.broker-name{font-family:'Poppins',sans-serif;font-size:13px;font-weight:700;color:var(--ink);}
+.broker-sub{font-size:10.5px;color:var(--ink4);}
+.broker-badge{width:18px;height:18px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;flex-shrink:0;}
+.broker-note{text-align:center;font-size:11.5px;color:var(--ink4);}
+
+.tweets-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.tweet-card{background:var(--white);border:1px solid var(--border);border-radius:18px;padding:24px;transition:all .3s;}
+.tweet-card:hover{transform:translateY(-4px);box-shadow:0 16px 48px #18160F0C;}
+.tweet-featured{border-color:var(--accent);background:var(--accent-bg);}
+.tweet-header{display:flex;align-items:center;gap:12px;margin-bottom:16px;}
+.tweet-av{width:40px;height:40px;border-radius:50%;color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-weight:800;font-size:15px;flex-shrink:0;}
+.tweet-name{font-family:'Poppins',sans-serif;font-size:14px;font-weight:700;color:var(--ink);}
+.tweet-handle{font-size:11.5px;color:var(--ink4);}
+.tweet-x{margin-left:auto;font-size:16px;color:var(--ink4);}
+.tweet-body{font-size:13.5px;color:var(--ink2);line-height:1.75;margin-bottom:16px;}
+.tweet-footer{border-top:1px solid var(--border);padding-top:12px;}
+.tweet-stat{font-size:11.5px;font-weight:700;color:var(--accent);}
+@media(max-width:960px){.tweets-grid{grid-template-columns:1fr;}}
+
+.footer-new{background:var(--ink);padding:0;}
+.fn-top{max-width:1160px;margin:0 auto;display:grid;grid-template-columns:1.4fr 1.5fr 1fr;gap:0;border-bottom:1px solid #ffffff0D;}
+.fn-brand-block{padding:60px 48px 52px 0;border-right:1px solid #ffffff0D;}
+.fn-tagline{font-size:15px;color:#ffffff44;line-height:1.7;margin-bottom:28px;}
+.fn-stats{display:flex;align-items:center;gap:0;}
+.fn-stat{text-align:center;padding:0 20px;}.fn-stat:first-child{padding-left:0;}
+.fn-stat-n{font-family:'Poppins',sans-serif;font-size:20px;font-weight:800;color:#fff;letter-spacing:-1px;}
+.fn-stat-l{font-size:10.5px;color:#ffffff33;margin-top:2px;}
+.fn-stat-div{width:1px;height:32px;background:#ffffff12;}
+.fn-links-block{padding:60px 48px;display:flex;gap:48px;border-right:1px solid #ffffff0D;}
+.fn-col{flex:1;}.fn-col-h{font-size:10.5px;font-weight:700;color:#ffffff28;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:16px;}
+.fn-col a{display:block;color:#ffffff44;font-size:13px;text-decoration:none;margin-bottom:10px;transition:color .2s;}.fn-col a:hover{color:#fff;}
+.fn-cta-block{padding:60px 0 52px 48px;display:flex;flex-direction:column;justify-content:center;}
+.fn-cta-label{font-size:10.5px;font-weight:700;color:var(--accent);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:12px;}
+.fn-cta-h{font-family:'Poppins',sans-serif;font-size:22px;font-weight:800;color:#fff;letter-spacing:-1px;line-height:1.25;margin-bottom:24px;}
+.fn-cta-btn{display:inline-block;background:var(--accent);color:#fff;font-size:13.5px;font-weight:700;padding:12px 24px;border-radius:9px;text-decoration:none;transition:all .2s;margin-bottom:16px;}.fn-cta-btn:hover{background:var(--accent2);transform:translateY(-2px);}
+.fn-status{display:flex;align-items:center;gap:7px;font-size:11.5px;color:#ffffff33;}
+.fn-status-dot{width:6px;height:6px;border-radius:50%;background:var(--green);animation:pulse 2s infinite;flex-shrink:0;}
+.fn-bottom{max-width:1160px;margin:0 auto;padding:20px 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+.fn-copy{color:#ffffff18;font-size:12px;}.fn-dis{color:#ffffff18;font-size:11px;}
+@media(max-width:960px){.fn-top{grid-template-columns:1fr;}.fn-brand-block,.fn-links-block,.fn-cta-block{padding:36px 0;border-right:none;border-bottom:1px solid #ffffff0D;}.fn-links-block{flex-wrap:wrap;gap:28px;}.fn-bottom{flex-direction:column;text-align:center;}}
 </style>
 </head>
 <body>
@@ -331,26 +373,25 @@ footer{background:var(--ink2);padding:52px 5% 32px;}
   <div class="h-glow"></div>
   <div class="h-inner">
     <div>
-      <div class="h-pill"><span class="h-dot"></span>Reinventing the terminal for Indian markets</div>
+      <div class="h-pill"><span class="h-dot"></span>AI Terminal · NSE &amp; BSE · 50+ investors</div>
       <h1 class="h-h">
-        Dashboards show data.<br>
-        <span class="muted">BlackHubble validates</span><br>
-        <span class="acc">your hypothesis.</span>
+        Stop reading charts.<br>
+        <span class="muted">Start asking</span><br>
+        <span class="acc">the right question.</span>
       </h1>
       <p class="h-sub">
-        Whether consciously or subconsciously, every investor who opens a terminal is trying to validate a hypothesis.
-        <strong>BlackHubble is built around exactly that</strong> — test any market idea on NSE/BSE instantly, using intelligent agents that know your portfolio.
+        <strong>You already have a hypothesis.</strong> BlackHubble validates it — instantly, intelligently, in plain English.
       </p>
       <div class="h-acts">
-        <a href="https://app.blackhubble.com/signup" class="btn-acc">Start Free — No Card Needed →</a>
+        <a href="https://app.blackhubble.com/signup" class="btn-acc">Try Free — No Card Needed →</a>
         <a href="#how" class="btn-ol">See how it works</a>
       </div>
       <div class="h-soc">
         <div class="avs"><div class="av">R</div><div class="av">A</div><div class="av">S</div><div class="av">K</div><div class="av">+</div></div>
-        <span>50+ investors already using BlackHubble</span>
+        <span>50+ investors already thinking with BlackHubble</span>
       </div>
     </div>
-    <div style="position:relative;padding:24px 28px 24px 28px;">
+    <div style="position:relative;padding:36px 28px 36px 28px;z-index:1;">
       <div class="fc fc1"><div class="f-label">Portfolio Today</div><div class="f-val">₹4,82,340 <span style="font-size:11px;color:var(--green)">▲ +1.8%</span></div></div>
       <div class="fc fc2"><div class="f-label">Agent Alert</div><div class="f-val" style="font-size:12px;">Tax-loss harvest window open ⚡</div></div>
       <div class="term">
@@ -372,15 +413,50 @@ footer{background:var(--ink2);padding:52px 5% 32px;}
 </section>
 
 <!-- LOGOS -->
-<div class="logo-bar">
-  <div class="logo-inner">
-    <span class="logo-label">Connects with</span>
-    <span class="logo-chip">🟢 Zerodha</span>
-    <span class="logo-chip">📱 Groww</span>
-    <span class="logo-chip">👼 Angel One</span>
-    <span class="logo-chip">⬆️ Upstox</span>
-    <span class="logo-chip">🏦 ICICI Direct</span>
-    <span class="logo-chip">📊 NSE · BSE · F&amp;O</span>
+<div class="broker-bar">
+  <div class="broker-inner">
+    <div class="broker-label">One terminal. Every broker.</div>
+    <div class="broker-grid">
+      <div class="broker-chip active">
+        <div class="broker-dot"></div>
+        <div class="broker-info">
+          <div class="broker-name">Zerodha</div>
+          <div class="broker-sub">Live · OAuth</div>
+        </div>
+        <div class="broker-badge">✓</div>
+      </div>
+      <div class="broker-chip">
+        <div class="broker-info">
+          <div class="broker-name">Groww</div>
+          <div class="broker-sub">Connecting</div>
+        </div>
+      </div>
+      <div class="broker-chip">
+        <div class="broker-info">
+          <div class="broker-name">Angel One</div>
+          <div class="broker-sub">Connecting</div>
+        </div>
+      </div>
+      <div class="broker-chip">
+        <div class="broker-info">
+          <div class="broker-name">Upstox</div>
+          <div class="broker-sub">Connecting</div>
+        </div>
+      </div>
+      <div class="broker-chip">
+        <div class="broker-info">
+          <div class="broker-name">ICICI Direct</div>
+          <div class="broker-sub">Connecting</div>
+        </div>
+      </div>
+      <div class="broker-chip broker-nse">
+        <div class="broker-info">
+          <div class="broker-name">NSE · BSE · F&amp;O</div>
+          <div class="broker-sub">Market data · Live</div>
+        </div>
+      </div>
+    </div>
+    <div class="broker-note">Account Aggregator framework — all brokers, one connection</div>
   </div>
 </div>
 
@@ -389,51 +465,47 @@ footer{background:var(--ink2);padding:52px 5% 32px;}
   <div class="s-inner">
     <p class="eyebrow fade" style="text-align:center;">The Problem</p>
     <h2 class="s-h fade" style="text-align:center;max-width:700px;margin:0 auto 16px;">Terminals are dashboards.<br><span class="g">Not thinking tools.</span></h2>
-    <p class="fade" style="text-align:center;color:var(--ink3);font-size:16px;max-width:560px;margin:0 auto 72px;line-height:1.75;">There's a hypothesis in every investor's mind. <em>Something they're trying to validate.</em> But terminals today are static, passive, reactive — they show data, not answers.</p>
+    <p class="fade" style="text-align:center;color:var(--ink3);font-size:16px;max-width:480px;margin:0 auto 60px;line-height:1.7;">You already have the idea. The data exists. <em>The gap is validation.</em></p>
     <div class="prob-flow fade">
       <div class="pf-item">
         <div class="pf-icon">📊</div>
-        <div class="pf-label">Data overload</div>
-        <div class="pf-desc">50 ratios. No context.</div>
+        <div class="pf-label">Data overload</div><div class="pf-desc">50 ratios. No answers.</div>
       </div>
       <div class="pf-arrow">→</div>
       <div class="pf-item">
         <div class="pf-icon">🔀</div>
-        <div class="pf-label">Platform hopping</div>
-        <div class="pf-desc">Charts → News → Screener → Macro</div>
+        <div class="pf-label">Platform hopping</div><div class="pf-desc">Charts. News. Screener. Macro. Repeat.</div>
       </div>
       <div class="pf-arrow">→</div>
       <div class="pf-item">
         <div class="pf-icon">❓</div>
-        <div class="pf-label">Still no answer</div>
-        <div class="pf-desc">Buy? Hold? Exit? Unclear.</div>
+        <div class="pf-label">Still no answer</div><div class="pf-desc">Buy? Hold? Exit? Still unclear.</div>
       </div>
       <div class="pf-arrow pf-accent">→</div>
       <div class="pf-item pf-item-bh">
         <div class="pf-icon">🔭</div>
-        <div class="pf-label" style="color:var(--accent);">BlackHubble</div>
-        <div class="pf-desc">Validate instantly. Decide.</div>
+        <div class="pf-label" style="color:#fff;font-weight:800;">BlackHubble</div><div class="pf-desc">Ask. Validate. Decide.</div>
       </div>
     </div>
     <div class="prob-stats fade fd1">
       <div class="ps-item">
         <div class="ps-num">12M+</div>
-        <div class="ps-label">Indian retail investors with no institutional-grade tools</div>
+        <div class="ps-label">Indian retail investors. Zero institutional tools.</div>
       </div>
       <div class="ps-div"></div>
       <div class="ps-item">
         <div class="ps-num">0</div>
-        <div class="ps-label">Platforms that let you test a hypothesis on NSE/BSE data today</div>
+        <div class="ps-label">Platforms that validate hypotheses on NSE/BSE data. Until now.</div>
       </div>
       <div class="ps-div"></div>
       <div class="ps-item">
         <div class="ps-num">45 min</div>
-        <div class="ps-label">Average time spent staring at charts before making a decision</div>
+        <div class="ps-label">Avg time staring at charts before a decision. Wasted.</div>
       </div>
       <div class="ps-div"></div>
       <div class="ps-item">
         <div class="ps-num">60 sec</div>
-        <div class="ps-label" style="color:var(--accent);font-weight:700;">Time to validate any hypothesis with BlackHubble</div>
+        <div class="ps-label" style="color:var(--accent);font-weight:700;">Time to validate any hypothesis. With BlackHubble.</div>
       </div>
     </div>
   </div>
@@ -443,14 +515,14 @@ footer{background:var(--ink2);padding:52px 5% 32px;}
 <section id="how">
   <div class="s-inner">
     <p class="eyebrow fade">How It Works</p>
-    <h2 class="s-h fade">From hypothesis<br><span class="g">to validated insight.</span></h2>
+    <h2 class="s-h fade">From question<br><span class="g">to conviction. In seconds.</span></h2>
     <div class="how-grid">
       <div class="how-steps fade">
-        <div class="how-step"><div class="h-num">01</div><div class="h-step-body"><h3>Connect your broker</h3><p>One-click Zerodha OAuth. Holdings, P&amp;L and positions sync instantly. Read-only — we can never trade on your behalf.</p></div></div>
-        <div class="how-step"><div class="h-num">02</div><div class="h-step-body"><h3>AI maps your portfolio</h3><p>BlackHubble builds your complete financial context — positions, sectors, risk profile, past trades. All in one place.</p></div></div>
-        <div class="how-step"><div class="h-num">03</div><div class="h-step-body"><h3>Test any hypothesis</h3><p>Run compute-heavy backtests across fundamentals, prices, macro and alternative data — instantly. No code needed.</p></div></div>
-        <div class="how-step"><div class="h-num">04</div><div class="h-step-body"><h3>Agents react to live market changes</h3><p>Spin up agents that react to market events — sector rotations, earnings, FII flows. Even initiate alerts when your conditions match.</p></div></div>
-        <div class="how-step"><div class="h-num">05</div><div class="h-step-body"><h3>Research trail persists</h3><p>Agents persist memory across sessions — your research is never lost. Pick up exactly where you left off.</p></div></div>
+        <div class="how-step"><div class="h-num">01</div><div class="h-step-body"><h3>Connect your broker</h3><p>One-click Zerodha OAuth. Read-only. Holdings sync in seconds. We never touch your trades.</p></div></div>
+        <div class="how-step"><div class="h-num">02</div><div class="h-step-body"><h3>AI learns your context</h3><p>Sectors, risk, behaviour, allocation. BlackHubble builds a live model of your financial world.</p></div></div>
+        <div class="how-step"><div class="h-num">03</div><div class="h-step-body"><h3>Ask. Backtest. Validate.</h3><p>Type any hypothesis in plain English. Agents backtest it across NSE/BSE data — fundamentals, price, macro. Instantly.</p></div></div>
+        <div class="how-step"><div class="h-num">04</div><div class="h-step-body"><h3>Agents watch while you sleep</h3><p>Set conditions. Agents react to live market events 24/7 — FII flows, earnings surprises, sector shifts. You get the signal, not the noise.</p></div></div>
+        <div class="how-step"><div class="h-num">05</div><div class="h-step-body"><h3>Memory that never resets</h3><p>Every hypothesis tested, every insight discovered — persisted. Next session picks up exactly where you left off.</p></div></div>
       </div>
       <div class="fade fd2">
         <div class="how-demo">
@@ -556,8 +628,8 @@ footer{background:var(--ink2);padding:52px 5% 32px;}
 <section id="human">
   <div class="s-inner">
     <p class="eyebrow fade">The Thinking Terminal</p>
-    <h2 class="s-h fade">No charts to decode.<br><span class="g">Just ask. Get answers.</span></h2>
-    <p class="s-sub fade" style="margin-bottom:64px;">Complex graphs tell you nothing if you can't act on them. BlackHubble replaces dashboards with conversations — you discuss markets in plain English, and intelligent agents do the analytical heavy lifting.</p>
+    <h2 class="s-h fade">Your Bloomberg.<br><span class="g">In plain English.</span></h2>
+    <p class="s-sub fade" style="margin-bottom:64px;">Institutional-grade intelligence. Zero jargon. Ask anything — agents read the charts, run the numbers, and give you a clear answer in the context of your portfolio.</p>
     <div class="human-grid fade">
       <div class="bh-terminal-demo">
         <div class="bhtd-bar">
@@ -609,10 +681,10 @@ footer{background:var(--ink2);padding:52px 5% 32px;}
         </div>
       </div>
       <div class="human-list">
-        <div class="h-feat"><div class="h-feat-icon">💬</div><div><h3>Converse, don't decipher</h3><p>Ask in plain English. Agents read charts, fundamentals and macro data so you don't have to. Insight — not information overload.</p></div></div>
-        <div class="h-feat"><div class="h-feat-icon">🧠</div><div><h3>Persist memory across sessions</h3><p>Your research trail is never lost. Agents remember your past hypotheses, tested ideas and portfolio context — session after session.</p></div></div>
-        <div class="h-feat"><div class="h-feat-icon">⛓️</div><div><h3>Chain multi-hop workflows</h3><p>If FII outflows spike and earnings miss — agents automatically surface affected sectors, flag your holdings and show next move ideas.</p></div></div>
-        <div class="h-feat"><div class="h-feat-icon">✅</div><div><h3>Validate, then decide</h3><p>It's not just data access — it's agent-driven insight and action. Test the hypothesis. Validate with data. Decide with confidence.</p></div></div>
+        <div class="h-feat"><div class="h-feat-icon">💬</div><div><h3>Converse, don't decipher</h3><p>Speak. Agents listen, analyse, and answer. No chart literacy required.</p></div></div>
+        <div class="h-feat"><div class="h-feat-icon">🧠</div><div><h3>Memory that persists</h3><p>Research never starts from scratch. Agents carry full context — hypothesis by hypothesis, session by session.</p></div></div>
+        <div class="h-feat"><div class="h-feat-icon">⛓️</div><div><h3>Multi-hop intelligence</h3><p>FII outflows + earnings miss → agent surfaces affected sectors → flags your holdings → surfaces next move. Automatically.</p></div></div>
+        <div class="h-feat"><div class="h-feat-icon">✅</div><div><h3>Validate, then act</h3><p>Not just data — agent-driven insight. Test → Validate → Decide. That's the loop.</p></div></div>
       </div>
     </div>
   </div>
@@ -672,6 +744,32 @@ footer{background:var(--ink2);padding:52px 5% 32px;}
   </div>
 </section>
 
+
+<!-- SOCIAL PROOF -->
+<section id="social" style="background:var(--bg2);padding:80px 5%;">
+  <div class="s-inner">
+    <p class="eyebrow fade" style="text-align:center;">Early Users</p>
+    <h2 class="s-h fade" style="text-align:center;max-width:500px;margin:0 auto 52px;">What investors are saying</h2>
+    <div class="tweets-grid fade">
+      <div class="tweet-card">
+        <div class="tweet-header"><div class="tweet-av" style="background:linear-gradient(135deg,#4F46E5,#818CF8)">R</div><div><div class="tweet-name">Rahul M.</div><div class="tweet-handle">NSE trader · Mumbai</div></div><div class="tweet-x">✕</div></div>
+        <div class="tweet-body">"Asked BlackHubble if I should add to HDFC before the RBI meet. It ran a backtest, checked my allocation, and gave me a specific entry level. In 30 seconds. That used to take me an hour."</div>
+        <div class="tweet-footer"><span class="tweet-stat">⚡ Hypothesis validated</span></div>
+      </div>
+      <div class="tweet-card tweet-featured">
+        <div class="tweet-header"><div class="tweet-av" style="background:linear-gradient(135deg,#1E7A4A,#4ade80)">A</div><div><div class="tweet-name">Ananya S.</div><div class="tweet-handle">Retail investor · Bangalore</div></div><div class="tweet-x">✕</div></div>
+        <div class="tweet-body">"I've been investing for 6 years and never understood what 'high FII selling in IT' actually meant for my portfolio. BlackHubble explained it — and showed me exactly which of my stocks were affected."</div>
+        <div class="tweet-footer"><span class="tweet-stat">🧠 Portfolio clarity</span></div>
+      </div>
+      <div class="tweet-card">
+        <div class="tweet-header"><div class="tweet-av" style="background:linear-gradient(135deg,#D97706,#FCD34D)">K</div><div><div class="tweet-name">Karan P.</div><div class="tweet-handle">F&amp;O trader · Delhi</div></div><div class="tweet-x">✕</div></div>
+        <div class="tweet-body">"The options agent caught an unusual OI buildup in Nifty 3 days before I would have noticed it manually. This is what I needed — a terminal that actually watches the market while I work."</div>
+        <div class="tweet-footer"><span class="tweet-stat">⚡ Agent triggered alert</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- COMPARE -->
 <section id="compare">
   <div class="s-inner">
@@ -712,8 +810,8 @@ footer{background:var(--ink2);padding:52px 5% 32px;}
   <div class="cta-grid-bg"></div><div class="cta-glow"></div>
   <div class="cta-inner">
     <div class="cta-badge">🇮🇳 Built for India's 12 million investors</div>
-    <h2 class="cta-h">Reimagine how you<br><em>interact with markets.</em></h2>
-    <p class="cta-sub">It's not just data access — it's agent-driven insight and action. Test any market hypothesis on NSE/BSE. Get answers in plain English. No charts required.</p>
+    <h2 class="cta-h">The market doesn't wait.<br><em>Neither should you.</em></h2>
+    <p class="cta-sub">Your hypothesis. Validated in seconds.</p>
     <div class="cta-acts">
       <a href="https://app.blackhubble.com/signup" class="btn-white">Get Early Access — Free →</a>
       <a href="#how" class="btn-ow">See how it works</a>
