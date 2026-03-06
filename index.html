@@ -86,11 +86,11 @@ section{padding:112px 5%;}
 #problem{background:var(--bg);}
 .prob-flow{display:flex;align-items:center;justify-content:center;gap:0;flex-wrap:wrap;margin-bottom:64px;background:var(--white);border:1px solid var(--border);border-radius:20px;padding:40px 32px;}
 .pf-item{display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 24px;}
-.pf-item-bh{background:var(--ink);border-radius:14px;padding:20px 28px;margin:-20px 0;}
+.pf-item-bh{background:var(--accent);border-radius:14px;padding:20px 28px;margin:-20px 0;}
 .pf-icon{font-size:28px;margin-bottom:10px;}
 .pf-label{font-family:'Poppins',sans-serif;font-size:13px;font-weight:700;color:var(--ink);margin-bottom:4px;white-space:nowrap;}
 .pf-desc{font-size:12px;color:var(--ink3);}
-.pf-item-bh .pf-label{color:var(--accent)!important;}.pf-item-bh .pf-desc{color:#ffffff66;}
+.pf-item-bh .pf-label{color:var(--accent)!important;}.pf-item-bh .pf-desc{color:#ffffff99;}
 .pf-arrow{font-size:22px;color:var(--border2);padding:0 4px;flex-shrink:0;}.pf-accent{color:var(--accent);}
 .prob-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;background:var(--white);border:1px solid var(--border);border-radius:20px;overflow:hidden;}
 .ps-item{padding:32px 28px;text-align:center;}
@@ -136,7 +136,7 @@ section{padding:112px 5%;}
 .human-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;margin-top:64px;}
 .old-new{display:flex;flex-direction:column;gap:16px;}
 .old-box{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:26px;}
-.new-box{background:var(--ink);border-radius:14px;padding:26px;position:relative;overflow:hidden;}.new-box::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent),#E8874A);}
+.new-box{background:linear-gradient(135deg,#2E2B22 0%,var(--accent2) 100%);border-radius:14px;padding:26px;position:relative;overflow:hidden;}.new-box::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent),#E8874A);}
 .box-label{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:10px;}
 .old-box .box-label{color:var(--accent);}.new-box .box-label{color:var(--accent);}
 .box-h{font-family:'Poppins',sans-serif;font-size:16px;font-weight:700;letter-spacing:-.3px;margin-bottom:10px;}
@@ -154,7 +154,7 @@ section{padding:112px 5%;}
 .mod-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
 .mod{background:var(--bg);border:1px solid var(--border);border-radius:14px;padding:24px 20px;transition:all .25s;}.mod:hover{border-color:var(--accent);transform:translateY(-3px);box-shadow:0 12px 40px #18160F0A;}
 .m-status{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.8px;padding:3px 8px;border-radius:4px;text-transform:uppercase;margin-bottom:12px;}
-.m-status.live{background:var(--green-bg);color:var(--green);}.m-status.soon{background:var(--bg3);color:var(--ink4);}
+.m-status.live{background:var(--green-bg);color:var(--green);}.m-status.soon{background:var(--green-bg);color:var(--green);}
 .m-icon{font-size:24px;margin-bottom:10px;display:block;}
 .m-name{font-family:'Poppins',sans-serif;font-size:14px;font-weight:700;color:var(--ink);margin-bottom:6px;}
 .m-desc{font-size:12.5px;color:var(--ink3);line-height:1.65;}
@@ -162,7 +162,7 @@ section{padding:112px 5%;}
 #compare{background:var(--bg);}
 .c-wrap{overflow-x:auto;margin-top:48px;}
 .c-table{border:1px solid var(--border);border-radius:16px;overflow:hidden;min-width:520px;box-shadow:0 4px 24px #18160F07;}
-.c-row{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;border-bottom:1px solid var(--border);}.c-row:last-child{border-bottom:none;}.c-row.head{background:var(--ink);}
+.c-row{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;border-bottom:1px solid var(--border);}.c-row:last-child{border-bottom:none;}.c-row.head{background:var(--ink2);}
 .c-cell{padding:14px 20px;font-size:13px;border-left:1px solid var(--border);}.c-cell:first-child{border-left:none;}
 .c-row.head .c-cell{color:#ffffff44;font-size:11.5px;font-weight:700;letter-spacing:.5px;border-left-color:#ffffff08;}
 .c-row.head .c-cell.bh{color:#fff;font-size:14px;font-weight:700;}
@@ -180,7 +180,7 @@ section{padding:112px 5%;}
 .t-bio{font-size:13px;color:var(--ink3);line-height:1.75;}
 .t-loc{display:inline-flex;align-items:center;gap:5px;background:var(--bg);border:1px solid var(--border);border-radius:99px;padding:4px 12px;font-size:11px;color:var(--ink4);margin-top:14px;}
 
-#cta-section{background:var(--ink);padding:112px 5%;position:relative;overflow:hidden;}
+#cta-section{background:linear-gradient(160deg,#1e1a12 0%,#3D1A08 100%);padding:112px 5%;position:relative;overflow:hidden;}
 .cta-grid-bg{position:absolute;inset:0;background-image:linear-gradient(#ffffff04 1px,transparent 1px),linear-gradient(90deg,#ffffff04 1px,transparent 1px);background-size:60px 60px;}
 .cta-glow{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:400px;background:radial-gradient(ellipse,#C8501A1A 0%,transparent 65%);}
 .cta-inner{max-width:680px;margin:0 auto;text-align:center;position:relative;}
@@ -200,7 +200,7 @@ section{padding:112px 5%;}
 .faq-a{padding-bottom:20px;color:var(--ink3);font-size:14px;line-height:1.8;display:none;}
 
 #careers{background:var(--bg2);}
-.careers-box{background:var(--ink);border-radius:22px;padding:60px;display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center;margin-bottom:40px;}
+.careers-box{background:linear-gradient(135deg,var(--ink2) 0%,#3D1A08 100%);border-radius:22px;padding:60px;display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center;margin-bottom:40px;border:1px solid var(--accent2);}
 .car-left h2{font-family:'Poppins',sans-serif;font-size:clamp(24px,3vw,42px);font-weight:800;color:#fff;letter-spacing:-1.5px;line-height:1.15;margin-bottom:14px;}
 .car-left p{color:#ffffff44;font-size:15px;line-height:1.75;margin-bottom:28px;}
 .car-vals{display:flex;flex-direction:column;gap:14px;}
@@ -212,7 +212,7 @@ section{padding:112px 5%;}
 .job-title{font-family:'Poppins',sans-serif;font-size:15px;font-weight:700;color:var(--ink);margin-bottom:4px;}
 .job-meta{font-size:12.5px;color:var(--ink3);}.job-arr{color:var(--accent);font-size:20px;}
 
-footer{background:var(--ink);padding:52px 5% 32px;}
+footer{background:var(--ink2);padding:52px 5% 32px;}
 .ft{max-width:1160px;margin:0 auto;}
 .ft-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:48px;margin-bottom:52px;}
 .ft-brand p{font-size:13px;color:#ffffff33;line-height:1.75;margin-top:14px;max-width:240px;}
@@ -274,7 +274,7 @@ footer{background:var(--ink);padding:52px 5% 32px;}
 .mod-showcase{display:grid;grid-template-columns:220px 1fr 220px;gap:16px;align-items:start;}
 .ms-col-label{font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:6px 12px;border-radius:6px;margin-bottom:10px;display:inline-block;}
 .live-label{background:var(--green-bg);color:var(--green);}
-.soon-label{background:var(--bg3);color:var(--ink4);}
+.live-label{background:var(--bg3);color:var(--ink4);}
 .ms-card{background:var(--white);border:1.5px solid var(--border);border-radius:12px;padding:14px 16px;display:flex;align-items:center;gap:12px;margin-bottom:8px;cursor:pointer;transition:all .2s;}
 .ms-card:hover,.ms-card.active{border-color:var(--accent);background:var(--accent-bg);}
 .ms-card-icon{font-size:20px;flex-shrink:0;}
@@ -282,12 +282,12 @@ footer{background:var(--ink);padding:52px 5% 32px;}
 .ms-card-desc{font-size:11px;color:var(--ink3);}
 .ms-card-info{flex:1;}
 .ms-card-arr{color:var(--accent);font-size:16px;opacity:0;transition:opacity .2s;}.ms-card:hover .ms-card-arr{opacity:1;}
-.ms-preview{background:var(--ink);border-radius:16px;padding:36px 32px;min-height:320px;display:flex;align-items:center;position:sticky;top:100px;}
+.ms-preview{background:var(--bg);border:1px solid var(--border);border-radius:16px;padding:36px 32px;min-height:320px;display:flex;align-items:center;position:sticky;top:100px;}
 .ms-pv-tag{margin-bottom:14px;display:inline-block;}
-.ms-pv-name{font-family:'Poppins',sans-serif;font-size:24px;font-weight:800;color:#fff;letter-spacing:-1px;margin-bottom:10px;}
-.ms-pv-desc{font-size:14px;color:#ffffff55;line-height:1.7;margin-bottom:20px;}
+.ms-pv-name{font-family:'Poppins',sans-serif;font-size:24px;font-weight:800;color:var(--ink);letter-spacing:-1px;margin-bottom:10px;}
+.ms-pv-desc{font-size:14px;color:var(--ink3);line-height:1.7;margin-bottom:20px;}
 .ms-pv-features{display:flex;flex-direction:column;gap:8px;margin-bottom:24px;}
-.ms-pv-feat{display:flex;align-items:center;gap:8px;font-size:13px;color:#ffffff66;}.ms-pv-feat::before{content:'→';color:var(--accent);font-weight:700;}
+.ms-pv-feat{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--ink3);}.ms-pv-feat::before{content:'→';color:var(--accent);font-weight:700;}
 .ms-pv-cta{display:inline-block;background:var(--accent);color:#fff;font-size:13.5px;font-weight:700;padding:10px 24px;border-radius:8px;text-decoration:none;transition:all .2s;}.ms-pv-cta:hover{background:var(--accent2);}
 .ms-live-col,.ms-soon-col{display:flex;flex-direction:column;}
 @media(max-width:960px){.mod-showcase{grid-template-columns:1fr;}.ms-preview{position:static;}}
@@ -626,7 +626,7 @@ footer{background:var(--ink);padding:52px 5% 32px;}
     <p class="fade" style="text-align:center;color:var(--ink3);font-size:15px;max-width:480px;margin:0 auto 64px;">Every insight knows your positions. Every module feeds every other. It's not a collection of tools — it's one interconnected system.</p>
     <div class="mod-showcase fade">
       <div class="ms-live-col">
-        <div class="ms-col-label live-label">⚡ Live Now</div>
+        <div class="ms-col-label live-label">⚡ Live</div>
         <div class="ms-card live-card" onclick="setActiveModule('screener')">
           <div class="ms-card-icon">📊</div>
           <div class="ms-card-info">
@@ -660,13 +660,13 @@ footer{background:var(--ink);padding:52px 5% 32px;}
         </div>
       </div>
       <div class="ms-soon-col">
-        <div class="ms-col-label soon-label">🔮 Coming Soon</div>
-        <div class="ms-card soon-card" onclick="setActiveModule('hypothesis')"><div class="ms-card-icon">🔭</div><div class="ms-card-info"><div class="ms-card-name">Hypothesis Testing</div><div class="ms-card-desc">Backtest any idea · No code</div></div></div>
-        <div class="ms-card soon-card" onclick="setActiveModule('agents')"><div class="ms-card-icon">🤖</div><div class="ms-card-info"><div class="ms-card-name">AI Agents</div><div class="ms-card-desc">Autonomous · Memory-persistent</div></div></div>
-        <div class="ms-card soon-card" onclick="setActiveModule('options')"><div class="ms-card-icon">⚡</div><div class="ms-card-info"><div class="ms-card-name">Options Screener</div><div class="ms-card-desc">OI · PCR · IV crush · Max pain</div></div></div>
-        <div class="ms-card soon-card" onclick="setActiveModule('fundamentals')"><div class="ms-card-icon">📈</div><div class="ms-card-info"><div class="ms-card-name">Fundamentals</div><div class="ms-card-desc">Quarterly results · 10-yr data</div></div></div>
-        <div class="ms-card soon-card" onclick="setActiveModule('earnings')"><div class="ms-card-icon">📅</div><div class="ms-card-info"><div class="ms-card-name">Earnings Calendar</div><div class="ms-card-desc">AI-predicted moves · Pre-results</div></div></div>
-        <div class="ms-card soon-card" onclick="setActiveModule('macro')"><div class="ms-card-icon">🌐</div><div class="ms-card-info"><div class="ms-card-name">Macro &amp; RBI</div><div class="ms-card-desc">Rate impact · CPI · FII/DII flows</div></div></div>
+        <div class="ms-col-label live-label">⚡ Live</div>
+        <div class="ms-card live-card" onclick="setActiveModule('hypothesis')"><div class="ms-card-icon">🔭</div><div class="ms-card-info"><div class="ms-card-name">Hypothesis Testing</div><div class="ms-card-desc">Backtest any idea · No code</div></div></div>
+        <div class="ms-card live-card" onclick="setActiveModule('agents')"><div class="ms-card-icon">🤖</div><div class="ms-card-info"><div class="ms-card-name">AI Agents</div><div class="ms-card-desc">Autonomous · Memory-persistent</div></div></div>
+        <div class="ms-card live-card" onclick="setActiveModule('options')"><div class="ms-card-icon">⚡</div><div class="ms-card-info"><div class="ms-card-name">Options Screener</div><div class="ms-card-desc">OI · PCR · IV crush · Max pain</div></div></div>
+        <div class="ms-card live-card" onclick="setActiveModule('fundamentals')"><div class="ms-card-icon">📈</div><div class="ms-card-info"><div class="ms-card-name">Fundamentals</div><div class="ms-card-desc">Quarterly results · 10-yr data</div></div></div>
+        <div class="ms-card live-card" onclick="setActiveModule('earnings')"><div class="ms-card-icon">📅</div><div class="ms-card-info"><div class="ms-card-name">Earnings Calendar</div><div class="ms-card-desc">AI-predicted moves · Pre-results</div></div></div>
+        <div class="ms-card live-card" onclick="setActiveModule('macro')"><div class="ms-card-icon">🌐</div><div class="ms-card-info"><div class="ms-card-name">Macro &amp; RBI</div><div class="ms-card-desc">Rate impact · CPI · FII/DII flows</div></div></div>
       </div>
     </div>
   </div>
@@ -808,12 +808,12 @@ document.querySelectorAll('.fade').forEach(el=>obs.observe(el));
 const moduleData = {
   screener: {status:'live',name:'Stock Screener',desc:'Filter 1,400+ NSE/BSE stocks using 50+ parameters. AI ranks results by relevance to your portfolio and investment style.',features:['PE · PB · ROE · ROCE · EPS growth','FII% · DII% · Promoter holding','52-week high/low · Volume surge','Sector filter · Market cap filter','AI portfolio fit score'],cta:true},
   portfolio: {status:'live',name:'Portfolio',desc:'Unified P&L and allocation heatmap across all connected brokers. AI identifies concentration risk, overlaps and rebalancing opportunities.',features:['Multi-broker sync (Zerodha live)','Sector & stock concentration heatmap','P&L breakdown by holding period','Risk scoring 1-10','Tax-loss harvest windows'],cta:true},
-  hypothesis: {status:'soon',name:'Hypothesis Testing',desc:'Run compute-heavy backtests on real NSE/BSE data — no code needed. Natural language input, institutional-grade output.',features:['5-year NSE/BSE historical data','Fundamentals + price + macro + alt data','Win rate · Avg return · Matching events','Multi-dataset cross-correlation','Natural language query engine']},
-  agents: {status:'soon',name:'AI Agents',desc:'Autonomous agents that react to live market changes, persist memory across sessions, and chain multi-hop workflows.',features:['6 specialised agents','Real-time market event triggers','Memory persisted across sessions','Multi-hop logic chains','Custom condition builder']},
-  options: {status:'soon',name:'Options Screener',desc:'Full F&O intelligence — unusual OI buildup, PCR divergence, IV crush setups and max pain levels filtered to your positions.',features:['Unusual OI buildup detection','PCR tracking by strike','IV crush opportunity scanner','Max pain calculator','Position-filtered alerts']},
-  fundamentals: {status:'soon',name:'Fundamentals',desc:'10-year financial history, quarterly result analysis, promoter holding trends and FII/DII flow data.',features:['10-year P&L · Balance sheet · CF','Quarterly results with AI commentary','Promoter pledge & holding trend','FII/DII monthly flow data','Peer comparison engine']},
-  earnings: {status:'soon',name:'Earnings Calendar',desc:'AI-predicted price moves before results drop — based on historical earnings patterns for each specific stock.',features:['Pre-earnings move prediction','Historical earnings surprise data','Options IV vs historical IV','Post-result reaction patterns','Portfolio earnings impact summary']},
-  macro: {status:'soon',name:'Macro & RBI',desc:'Track RBI decisions, CPI, GST data and FII/DII flows — then see their direct impact on your portfolio sectors.',features:['RBI rate decision impact model','CPI & WPI trend tracker','FII/DII daily flow dashboard','GST collection as economic signal','Sector impact mapping engine']}
+  hypothesis: {status:'live',name:'Hypothesis Testing',desc:'Run compute-heavy backtests on real NSE/BSE data — no code needed. Natural language input, institutional-grade output.',features:['5-year NSE/BSE historical data','Fundamentals + price + macro + alt data','Win rate · Avg return · Matching events','Multi-dataset cross-correlation','Natural language query engine']},
+  agents: {status:'live',name:'AI Agents',desc:'Autonomous agents that react to live market changes, persist memory across sessions, and chain multi-hop workflows.',features:['6 specialised agents','Real-time market event triggers','Memory persisted across sessions','Multi-hop logic chains','Custom condition builder']},
+  options: {status:'live',name:'Options Screener',desc:'Full F&O intelligence — unusual OI buildup, PCR divergence, IV crush setups and max pain levels filtered to your positions.',features:['Unusual OI buildup detection','PCR tracking by strike','IV crush opportunity scanner','Max pain calculator','Position-filtered alerts']},
+  fundamentals: {status:'live',name:'Fundamentals',desc:'10-year financial history, quarterly result analysis, promoter holding trends and FII/DII flow data.',features:['10-year P&L · Balance sheet · CF','Quarterly results with AI commentary','Promoter pledge & holding trend','FII/DII monthly flow data','Peer comparison engine']},
+  earnings: {status:'live',name:'Earnings Calendar',desc:'AI-predicted price moves before results drop — based on historical earnings patterns for each specific stock.',features:['Pre-earnings move prediction','Historical earnings surprise data','Options IV vs historical IV','Post-result reaction patterns','Portfolio earnings impact summary']},
+  macro: {status:'live',name:'Macro & RBI',desc:'Track RBI decisions, CPI, GST data and FII/DII flows — then see their direct impact on your portfolio sectors.',features:['RBI rate decision impact model','CPI & WPI trend tracker','FII/DII daily flow dashboard','GST collection as economic signal','Sector impact mapping engine']}
 };
 function setActiveModule(key) {
   const d = moduleData[key];
@@ -822,15 +822,23 @@ function setActiveModule(key) {
   if(!el) return;
   const isLive = d.status === 'live';
   el.innerHTML = `
-    <div class="ms-pv-tag ${isLive ? 'live-label' : 'soon-label'}">${isLive ? '⚡ Live' : '🔮 Coming Soon'}</div>
+    <div class="ms-pv-tag ${isLive ? 'live-label' : 'live-label'}">${isLive ? '⚡ Live' : '⚡ Live'}</div>
     <div class="ms-pv-name">${d.name}</div>
     <div class="ms-pv-desc">${d.desc}</div>
     <div class="ms-pv-features">${d.features.map(f=>`<div class="ms-pv-feat">${f}</div>`).join('')}</div>
-    ${d.cta ? '<a href="https://app.blackhubble.com/signup" class="ms-pv-cta">Try it free →</a>' : '<span style="font-size:12px;color:#ffffff33;">Coming in next 60 days</span>'}
+    ${d.cta ? '<a href="https://app.blackhubble.com/signup" class="ms-pv-cta">Try it free →</a>' : '<span style="font-size:12px;color:#ffffff33;">Try it free →</span>'}
   `;
   document.querySelectorAll('.ms-card').forEach(c=>c.classList.remove('active'));
   event.currentTarget.classList.add('active');
 }
 // FAQ
 function doFaq(btn){
-  const a=btn.nextElementSibling,p=btn.querySe
+  const a=btn.nextElementSibling,p=btn.querySelector('.faq-plus');
+  const open=a.style.display==='block';
+  document.querySelectorAll('.faq-a').forEach(x=>x.style.display='none');
+  document.querySelectorAll('.faq-plus').forEach(x=>{x.style.transform='none';x.style.borderColor='var(--border2)';});
+  if(!open){a.style.display='block';p.style.transform='rotate(45deg)';p.style.borderColor='var(--accent)';}
+}
+</script>
+</body>
+</html>
