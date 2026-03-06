@@ -138,6 +138,7 @@ textarea{min-height:90px;}
 .btn-next:hover{background:linear-gradient(135deg,#C2410C,#E8540A);}
 .btn-submit{display:flex;align-items:center;gap:6px;background:linear-gradient(135deg,var(--teal),#0D9488);color:#fff;font-size:13.5px;font-weight:800;padding:11px 28px;border-radius:9px;border:none;cursor:pointer;font-family:inherit;transition:all .2s;}
 .btn-submit:hover{background:linear-gradient(135deg,var(--teal2),var(--teal));}
+.btn-submit:disabled{opacity:0.6;cursor:not-allowed;}
 .step-counter{font-size:12px;color:var(--ink4);}
 
 /* Success screen */
@@ -294,7 +295,12 @@ textarea{min-height:90px;}
 
     <!-- ── APPLICATION FORM ── -->
     <div id="appView" style="display:none;">
-      <div class="app-body">
+      <div class="app-body" id="appBody">
+
+        <!-- Error banner -->
+        <div class="error-banner" id="errorBanner" style="display:none;background:#FEF2F2;border:1px solid #FECACA;border-radius:10px;padding:12px 16px;font-size:13px;color:#DC2626;margin-bottom:16px;">
+          Something went wrong. Please try again or email us at business@blackhubble.com
+        </div>
 
         <div class="app-intro">
           <h3>Join the Team</h3>
@@ -539,7 +545,8 @@ function closeModal() {
     currentStep = 0;
     updateStepUI();
     document.getElementById('successScreen').classList.remove('show');
-    document.getElementById('appView').querySelector('.app-body').style.display = 'block';
+    document.getElementById('appBody').style.display = 'block';
+    document.getElementById('errorBanner').style.display = 'none';
     switchTab('overview');
   }, 300);
 }
@@ -610,83 +617,65 @@ function prevStep() {
   if (currentStep > 0) { currentStep--; updateStepUI(); }
 }
 
-function submitApplication() {
-  const job = jobs[currentRole];
+// ── FORMSPREE CONFIG ──
+const FORMSPREE_ID = 'xlgpejko';
+
+async function submitApplication() {
+  const btn = document.getElementById('btnSubmit');
+  btn.textContent = 'Submitting...';
+  btn.disabled = true;
+  document.getElementById('errorBanner').classList.remove('show');
+
   const data = {
-    role: document.getElementById('f_role').value,
-    name: document.getElementById('f_name').value,
-    email: document.getElementById('f_email').value,
-    phone: document.getElementById('f_phone').value,
-    location: document.getElementById('f_location').value,
-    linkedin: document.getElementById('f_linkedin').value,
-    portfolio: document.getElementById('f_portfolio').value,
-    worktype: document.getElementById('f_worktype').value,
-    project: document.getElementById('f_project').value,
-    responsibility: document.getElementById('f_responsibility').value,
-    teamwork: document.getElementById('f_teamwork').value,
-    proud: document.getElementById('f_proud').value,
-    tools: document.getElementById('f_tools').value,
-    shipped: document.getElementById('f_shipped').value,
-    aitools: document.getElementById('f_aitools').value,
-    why: document.getElementById('f_why').value,
-    problem: document.getElementById('f_problem').value,
-    environment: document.getElementById('f_environment').value,
-    ownership: document.getElementById('f_ownership').value,
-    vague: document.getElementById('f_vague').value,
-    start: document.getElementById('f_start').value,
-    hours: document.getElementById('f_hours').value,
-    longterm: document.getElementById('f_longterm').value,
-    links: document.getElementById('f_links').value,
-    other: document.getElementById('f_other').value,
+    _subject: `BlackHubble Application — ${document.getElementById('f_role').value} — ${document.getElementById('f_name').value}`,
+    role:                   document.getElementById('f_role').value,
+    name:                   document.getElementById('f_name').value,
+    email:                  document.getElementById('f_email').value,
+    phone:                  document.getElementById('f_phone').value,
+    location:               document.getElementById('f_location').value,
+    linkedin:               document.getElementById('f_linkedin').value,
+    portfolio:              document.getElementById('f_portfolio').value,
+    work_type:              document.getElementById('f_worktype').value,
+    most_important_project: document.getElementById('f_project').value,
+    exact_responsibility:   document.getElementById('f_responsibility').value,
+    independent_or_team:    document.getElementById('f_teamwork').value,
+    most_proud_of:          document.getElementById('f_proud').value,
+    tools_and_tech:         document.getElementById('f_tools').value,
+    shipped_end_to_end:     document.getElementById('f_shipped').value,
+    ai_tools_usage:         document.getElementById('f_aitools').value,
+    why_blackhubble:        document.getElementById('f_why').value,
+    exciting_problem:       document.getElementById('f_problem').value,
+    work_environment:       document.getElementById('f_environment').value,
+    ownership_example:      document.getElementById('f_ownership').value,
+    vague_problem_approach: document.getElementById('f_vague').value,
+    start_date:             document.getElementById('f_start').value,
+    hours_per_week:         document.getElementById('f_hours').value,
+    long_term_goals:        document.getElementById('f_longterm').value,
+    links:                  document.getElementById('f_links').value,
+    anything_else:          document.getElementById('f_other').value,
   };
 
-  const body = `BlackHubble Job Application
+  try {
+    const response = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(data)
+    });
 
-ROLE: ${data.role}
-NAME: ${data.name}
-EMAIL: ${data.email}
-PHONE: ${data.phone}
-LOCATION: ${data.location}
-LINKEDIN: ${data.linkedin}
-PORTFOLIO: ${data.portfolio}
-
---- WORK & EXECUTION ---
-Work type: ${data.worktype}
-Most important project: ${data.project}
-Exact responsibility: ${data.responsibility}
-Independent/team: ${data.teamwork}
-Most proud of: ${data.proud}
-
---- SKILLS ---
-Tools: ${data.tools}
-Shipped end-to-end: ${data.shipped}
-AI tools usage: ${data.aitools}
-
---- MOTIVATION ---
-Why BlackHubble: ${data.why}
-Problem excites: ${data.problem}
-Work environment: ${data.environment}
-
---- OWNERSHIP ---
-Full ownership example: ${data.ownership}
-Vague problem approach: ${data.vague}
-
---- AVAILABILITY ---
-Start date: ${data.start}
-Hours/week: ${data.hours}
-Long-term: ${data.longterm}
-
---- ADDITIONAL ---
-Links: ${data.links}
-Other: ${data.other}`;
-
-  const subject = encodeURIComponent(`BlackHubble Application — ${data.role} — ${data.name}`);
-  const bodyEncoded = encodeURIComponent(body);
-  window.location.href = `mailto:business@blackhubble.com?subject=${subject}&body=${bodyEncoded}`;
-
-  // Show success screen
-  document.querySelector('.app-body').style.display = 'none';
-  document.getElementById('successScreen').classList.add('show');
+    if (response.ok) {
+      // ✅ Success
+      document.getElementById('appBody').style.display = 'none';
+      document.getElementById('successScreen').classList.add('show');
+    } else {
+      const json = await response.json();
+      throw new Error(json.error || 'Submission failed');
+    }
+  } catch (err) {
+    console.error('Formspree error:', err);
+    document.getElementById('errorBanner').classList.add('show');
+    btn.textContent = 'Submit Application ✓';
+    btn.disabled = false;
+  }
 }
 </script>
 </body>
