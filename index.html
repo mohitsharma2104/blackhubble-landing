@@ -751,7 +751,7 @@ section{padding:112px 5%;}
 <section id="modules">
   <div class="s-inner">
     <p class="eyebrow fade" style="text-align:center;">The Platform</p>
-    <h2 class="s-h fade" style="text-align:center;max-width:600px;margin:0 auto 14px;">One terminal.<br><span class="g">13 modules. All portfolio-aware.</span></h2>
+    <h2 class="s-h fade" style="text-align:center;max-width:600px;margin:0 auto 14px;">One terminal.<br><span class="g">13 modules. </span></h2>
     <p class="fade" style="text-align:center;color:var(--ink3);font-size:15px;max-width:480px;margin:0 auto 64px;">Every insight knows your positions. Every module feeds every other. It's not a collection of tools — it's one interconnected system.</p>
     <div class="mod-showcase fade">
       <div class="ms-live-col">
@@ -1001,12 +1001,9 @@ window.addEventListener('scroll',()=>document.getElementById('nav').classList.to
 // Mobile menu
 function toggleMenu(){document.getElementById('mobMenu').classList.toggle('open');}
 function cm(){document.getElementById('mobMenu').classList.remove('open');}
-
 // Scroll animations
 const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in');});},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
 document.querySelectorAll('.fade').forEach(el=>obs.observe(el));
-
-
 const moduleData = {
   screener: {status:'live',name:'Stock Screener',desc:'Filter 1,400+ NSE/BSE stocks using 50+ parameters. AI ranks results by relevance to your portfolio and investment style.',features:['PE · PB · ROE · ROCE · EPS growth','FII% · DII% · Promoter holding','52-week high/low · Volume surge','Sector filter · Market cap filter','AI portfolio fit score'],cta:true},
   portfolio: {status:'live',name:'Portfolio',desc:'Unified P&L and allocation heatmap across all connected brokers. AI identifies concentration risk, overlaps and rebalancing opportunities.',features:['Multi-broker sync (Zerodha live)','Sector & stock concentration heatmap','P&L breakdown by holding period','Risk scoring 1-10','Tax-loss harvest windows'],cta:true},
