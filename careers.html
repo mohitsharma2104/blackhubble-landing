@@ -668,6 +668,13 @@ async function submitApplication() {
       document.getElementById('successScreen').classList.add('show');
     } else {
       const json = await response.json();
+      if (response.status === 422) {
+        document.getElementById('errorBanner').innerHTML = '⚠️ Your application looks like spam to our filter. Please make sure each answer is unique and detailed — not copy-pasted. If this keeps happening, email us directly at <a href="mailto:business@blackhubble.com" style="color:#DC2626;">business@blackhubble.com</a>';
+        document.getElementById('errorBanner').style.display = 'block';
+        btn.textContent = 'Submit Application ✓';
+        btn.disabled = false;
+        return;
+      }
       throw new Error(json.error || 'Submission failed');
     }
   } catch (err) {
