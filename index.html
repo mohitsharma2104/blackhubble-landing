@@ -3,43 +3,26 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>BlackHubble — AI for India's Financial Markets</title>
+<title>BlackHubble</title>
 <link rel="icon" type="image/png" href="./logo.png"/>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 <style>
-:root {
-  --black: #080808;
-  --off-black: #0D0D0D;
-  --surface: #141414;
-  --border: rgba(255,255,255,0.08);
-  --border-hover: rgba(255,255,255,0.16);
-  --text: #F0EDE8;
-  --text-muted: rgba(240,237,232,0.5);
-  --text-subtle: rgba(240,237,232,0.22);
-  --accent: #E8540A;
-  --accent-dim: rgba(232,84,10,0.14);
-}
+:root{--black:#080808;--off-black:#0D0D0D;--surface:#141414;--border:rgba(255,255,255,0.08);--border-hover:rgba(255,255,255,0.16);--text:#F0EDE8;--text-muted:rgba(240,237,232,0.5);--text-subtle:rgba(240,237,232,0.22);--accent:#E8540A;--accent-dim:rgba(232,84,10,0.14);}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-html{scroll-behavior:smooth;}
-body{font-family:'DM Sans',system-ui,sans-serif;background:var(--black);color:var(--text);overflow-x:hidden;min-height:100vh;}
+html,body{height:100%;}
+body{font-family:'DM Sans',system-ui,sans-serif;background:var(--black);color:var(--text);overflow-x:hidden;}
 
-nav{position:fixed;top:0;left:0;right:0;z-index:500;height:64px;display:flex;align-items:center;padding:0 5%;justify-content:space-between;gap:16px;transition:background 0.3s,border-color 0.3s;}
-nav.scrolled{background:rgba(8,8,8,0.9);backdrop-filter:blur(24px);border-bottom:1px solid var(--border);}
-
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:500;height:64px;display:flex;align-items:center;padding:0 5%;justify-content:space-between;gap:16px;background:rgba(8,8,8,0.9);backdrop-filter:blur(24px);border-bottom:1px solid var(--border);}
 .nav-logo{display:flex;align-items:center;gap:9px;text-decoration:none;flex-shrink:0;}
 .nav-logo img{height:26px;width:auto;}
-.nav-logo-text{font-family:'Syne',sans-serif;font-weight:700;font-size:16px;color:var(--text);letter-spacing:-0.3px;}
-
+.nav-logo-text{font-family:'Syne',sans-serif;font-weight:700;font-size:16px;color:var(--text);}
 .nav-pill-group{display:flex;align-items:center;gap:4px;background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:12px;padding:4px;position:absolute;left:50%;transform:translateX(-50%);}
-
-.nav-pill{font-family:'DM Sans',sans-serif;font-size:13.5px;font-weight:500;color:var(--text-muted);text-decoration:none;padding:7px 16px;border-radius:8px;border:none;background:transparent;cursor:pointer;transition:color 0.18s,background 0.18s;white-space:nowrap;display:flex;align-items:center;gap:5px;letter-spacing:-0.1px;}
+.nav-pill{font-family:'DM Sans',sans-serif;font-size:13.5px;font-weight:500;color:var(--text-muted);text-decoration:none;padding:7px 16px;border-radius:8px;border:none;background:transparent;cursor:pointer;transition:color 0.18s,background 0.18s;white-space:nowrap;display:flex;align-items:center;gap:5px;}
 .nav-pill:hover,.nav-pill.open{color:var(--text);background:rgba(255,255,255,0.07);}
-
 .pill-chevron{width:11px;height:11px;opacity:0.4;transition:transform 0.18s,opacity 0.18s;}
 .nav-pill.open .pill-chevron{transform:rotate(180deg);opacity:0.7;}
-
 .nav-products-wrap{position:relative;}
-
 .nav-dropdown{position:absolute;top:calc(100% + 10px);left:50%;transform:translateX(-50%) translateY(-6px);background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:6px;min-width:180px;opacity:0;visibility:hidden;transition:opacity 0.16s,transform 0.16s,visibility 0.16s;box-shadow:0 24px 64px rgba(0,0,0,0.7);}
 .nav-dropdown.open{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0);}
 .nav-dropdown-label{font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-subtle);padding:6px 10px 4px;}
@@ -48,33 +31,24 @@ nav.scrolled{background:rgba(8,8,8,0.9);backdrop-filter:blur(24px);border-bottom
 .nav-dropdown-item:hover .dd-arrow{opacity:1;transform:translateX(0);}
 .dd-icon{width:30px;height:30px;border-radius:7px;background:var(--accent-dim);border:1px solid rgba(232,84,10,0.22);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
 .dd-dot{width:7px;height:7px;border-radius:50%;background:var(--accent);}
-.dd-name{font-family:'Syne',sans-serif;font-size:14px;font-weight:600;color:var(--text);letter-spacing:-0.2px;}
+.dd-name{font-family:'Syne',sans-serif;font-size:14px;font-weight:600;color:var(--text);}
 .dd-arrow{margin-left:auto;color:var(--text-subtle);font-size:12px;opacity:0;transform:translateX(-4px);transition:opacity 0.14s,transform 0.14s;}
-
 .nav-right{display:flex;align-items:center;gap:8px;flex-shrink:0;}
 .btn-ghost{font-family:'DM Sans',sans-serif;font-size:13.5px;font-weight:500;color:var(--text-muted);text-decoration:none;padding:7px 16px;border-radius:8px;border:1px solid var(--border);background:transparent;transition:all 0.18s;}
-.btn-ghost:hover{border-color:var(--border-hover);color:var(--text);background:rgba(255,255,255,0.04);}
-.btn-cta{font-family:'Syne',sans-serif;font-size:13.5px;font-weight:600;color:#fff;text-decoration:none;padding:8px 20px;border-radius:8px;background:var(--accent);border:none;cursor:pointer;transition:all 0.18s;letter-spacing:-0.2px;display:inline-block;}
+.btn-ghost:hover{border-color:var(--border-hover);color:var(--text);}
+.btn-cta{font-family:'Syne',sans-serif;font-size:13.5px;font-weight:600;color:#fff;text-decoration:none;padding:8px 20px;border-radius:8px;background:var(--accent);border:none;cursor:pointer;transition:all 0.18s;display:inline-block;}
 .btn-cta:hover{background:#d44909;transform:translateY(-1px);}
-
 .nav-hamburger{display:none;flex-direction:column;gap:4px;cursor:pointer;padding:7px;border-radius:8px;border:1px solid var(--border);background:transparent;}
 .nav-hamburger span{display:block;width:18px;height:1.5px;background:var(--text);border-radius:2px;}
-
 .nav-mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;background:var(--off-black);border-bottom:1px solid var(--border);padding:12px 5% 20px;flex-direction:column;z-index:499;}
 .nav-mobile-menu.open{display:flex;}
 .mob-section-label{font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-subtle);padding:14px 0 6px;}
-.mob-link{color:var(--text-muted);font-size:15px;text-decoration:none;padding:12px 0;border-bottom:1px solid var(--border);transition:color 0.15s;display:flex;align-items:center;justify-content:space-between;}
-.mob-link:hover{color:var(--text);}
-
+.mob-link{color:var(--text-muted);font-size:15px;text-decoration:none;padding:12px 0;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;}
 @media(max-width:780px){.nav-pill-group,.nav-right{display:none;}.nav-hamburger{display:flex;}}
 
-/* temp hero */
-.hero-placeholder{min-height:100vh;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:14px;text-align:center;padding:0 5%;position:relative;}
-.hero-placeholder::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 50% 0%,rgba(232,84,10,0.07) 0%,transparent 70%),linear-gradient(rgba(255,255,255,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.025) 1px,transparent 1px);background-size:100% 100%,72px 72px,72px 72px;pointer-events:none;}
-.hp-tag{font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--text-subtle);position:relative;}
-.hp-h{font-family:'Syne',sans-serif;font-size:clamp(40px,7vw,88px);font-weight:800;color:var(--text);letter-spacing:-4px;line-height:1;position:relative;}
-.hp-h em{color:var(--accent);font-style:normal;}
-.hp-sub{font-size:15px;color:var(--text-subtle);position:relative;}
+/* BLANK PAGE BODY */
+.blank-body{height:100vh;display:flex;align-items:center;justify-content:center;}
+.coming-text{font-family:'Syne',sans-serif;font-size:13px;font-weight:500;letter-spacing:3px;text-transform:uppercase;color:var(--text-subtle);}
 </style>
 </head>
 <body>
@@ -84,7 +58,6 @@ nav.scrolled{background:rgba(8,8,8,0.9);backdrop-filter:blur(24px);border-bottom
     <img src="./logo.png" alt="BlackHubble" onerror="this.style.display='none'"/>
     <span class="nav-logo-text">BlackHubble</span>
   </a>
-
   <div class="nav-pill-group">
     <div class="nav-products-wrap">
       <button class="nav-pill" id="productsBtn" onclick="toggleDropdown(event)">
@@ -95,23 +68,18 @@ nav.scrolled{background:rgba(8,8,8,0.9);backdrop-filter:blur(24px);border-bottom
       </button>
       <div class="nav-dropdown" id="navDropdown">
         <div class="nav-dropdown-label">Products</div>
-        <a href="https://plank.blackhubble.com" class="nav-dropdown-item" target="_blank">
+        <a href="https://plank.blackhubble.com" class="nav-dropdown-item">
           <div class="dd-icon"><div class="dd-dot"></div></div>
           <span class="dd-name">Plank</span>
           <span class="dd-arrow">↗</span>
         </a>
       </div>
     </div>
-    <a href="#mission" class="nav-pill">Mission</a>
-    <a href="#team" class="nav-pill">Team</a>
-    <a href="#careers" class="nav-pill">Careers</a>
   </div>
-
   <div class="nav-right">
     <a href="https://plank.blackhubble.com/login" class="btn-ghost">Login</a>
     <a href="https://plank.blackhubble.com/signup" class="btn-cta">Get Access →</a>
   </div>
-
   <button class="nav-hamburger" onclick="toggleMobile()">
     <span></span><span></span><span></span>
   </button>
@@ -120,21 +88,15 @@ nav.scrolled{background:rgba(8,8,8,0.9);backdrop-filter:blur(24px);border-bottom
 <div class="nav-mobile-menu" id="mobileMenu">
   <div class="mob-section-label">Products</div>
   <a href="https://plank.blackhubble.com" class="mob-link" onclick="closeMobile()" style="color:var(--text);font-family:'Syne',sans-serif;font-weight:600;">Plank <span style="color:var(--accent)">↗</span></a>
-  <a href="#mission" class="mob-link" onclick="closeMobile()">Mission</a>
-  <a href="#team" class="mob-link" onclick="closeMobile()">Team</a>
-  <a href="#careers" class="mob-link" onclick="closeMobile()">Careers</a>
   <a href="https://plank.blackhubble.com/login" class="mob-link" onclick="closeMobile()">Login</a>
   <a href="https://plank.blackhubble.com/signup" class="mob-link" onclick="closeMobile()" style="color:var(--accent);font-weight:600;border-bottom:none;">Get Access →</a>
 </div>
 
-<div class="hero-placeholder">
-  <div class="hp-tag">Nav done · Step 2 → Hero next</div>
-  <h1 class="hp-h">Black<em>Hubble</em></h1>
-  <p class="hp-sub">Hero section coming in the next step</p>
+<div class="blank-body">
+  <span class="coming-text">Coming soon</span>
 </div>
 
 <script>
-window.addEventListener('scroll',()=>{document.getElementById('mainNav').classList.toggle('scrolled',scrollY>20);});
 let dd=false;
 function toggleDropdown(e){e.stopPropagation();dd=!dd;document.getElementById('navDropdown').classList.toggle('open',dd);document.getElementById('productsBtn').classList.toggle('open',dd);}
 document.addEventListener('click',()=>{dd=false;document.getElementById('navDropdown').classList.remove('open');document.getElementById('productsBtn').classList.remove('open');});
